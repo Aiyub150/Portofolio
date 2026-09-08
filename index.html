@@ -3,38 +3,70 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Portofolio Aiyub Heriyanto, mahasiswa Computer Engineering dengan fokus Full Stack Web Development, IoT, dan Artificial Intelligence."
-    />
+    <meta name="description" content="Portofolio Aiyub Heriyanto, mahasiswa Computer Engineering dengan fokus Full Stack Web Development, IoT, dan Artificial Intelligence." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Aiyub Heriyanto | IoT Engineering & Full Stack Web Dev" />
+    <meta property="og:description" content="Mahasiswa D3 Teknik Komputer Politeknik Negeri Jember dengan fokus Full Stack Web Development, IoT, dan Artificial Intelligence." />
+    <meta property="og:image" content="img/banner LinkedIn.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aiyub150.github.io/Portofolio/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aiyub Heriyanto | IoT Engineering & Full Stack Web Dev" />
+    <meta name="twitter:description" content="Mahasiswa D3 Teknik Komputer dengan fokus Full Stack, IoT, dan AI." />
+    <meta name="twitter:image" content="img/banner LinkedIn.png" />
+
     <title>Aiyub Heriyanto | IoT Engineering & Full Stack Web Dev</title>
-    <link rel="stylesheet" href="styles.css?v=3" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23171765'/><text y='72' x='50' text-anchor='middle' font-size='52' font-family='system-ui' font-weight='900' fill='%23ffdc3c'>AH</text></svg>" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- ── HEADER ── -->
     <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="Aiyub Heriyanto">
-        <span class="brand-mark">AH</span>
+      <a class="brand" href="#home" aria-label="Aiyub Heriyanto – kembali ke atas">
+        <span class="brand-mark" aria-hidden="true">AH</span>
         <span>Aiyub Heriyanto</span>
       </a>
-      <nav class="nav-links" aria-label="Navigasi utama">
+
+      <nav class="nav-links" id="nav-links" aria-label="Navigasi utama">
         <a href="#profile">Profil</a>
         <a href="#skills">Skill</a>
         <a href="#experience">Pengalaman</a>
         <a href="#projects">Proyek</a>
         <a href="#contact">Kontak</a>
       </nav>
-      <a class="header-action" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">
-        Connect with me
-      </a>
+
+      <div class="header-right">
+        <a class="header-action" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">
+          Connect with me
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
+    <!-- Mobile nav backdrop -->
+    <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
     <main>
+      <!-- ── HERO ── -->
       <section class="hero" id="home">
         <div class="hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">Computer Engineering Student</p>
-            <h1>IoT Engineering & Full Stack Web Dev.</h1>
-            <p>
+            <h1>IoT Engineering<br />&amp; Full Stack<br />Web Dev.</h1>
+            <p class="hero-desc">
               Saya Aiyub Heriyanto, mahasiswa D3 Teknik Komputer di Politeknik Negeri Jember yang berfokus pada
               Full Stack Web Development, Internet of Things, dan Artificial Intelligence.
             </p>
@@ -46,38 +78,49 @@
               <span>Rasa Framework</span>
               <span>IoT</span>
               <span>AI</span>
-              <span>Backend web</span>
+              <span>Backend Web</span>
+              <span>Full Stack</span>
             </div>
           </div>
 
           <div class="hero-visual" aria-label="Foto Aiyub Heriyanto">
-            <div class="portrait-orbit" aria-hidden="true"></div>
-            <img src="img/IMG-20250805-WA0057-removebg-preview.png" alt="Aiyub Heriyanto" />
-            <div class="status-card">
-              <span>Current Position</span>
-              <strong>Intern at Otorita IKN · Deputi Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan</strong>
+            <div class="portrait-orbit" aria-hidden="true">
+              <div class="orbit-ring orbit-ring--1" aria-hidden="true"></div>
+              <div class="orbit-ring orbit-ring--2" aria-hidden="true"></div>
+            </div>
+            <img src="img/IMG-20250805-WA0057-removebg-preview.png" alt="Foto Aiyub Heriyanto" class="hero-photo" />
+            <div class="status-card" aria-label="Posisi saat ini">
+              <span class="status-label">Current Position</span>
+              <strong>Intern at Otorita IKN</strong>
+              <p>Deputi Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan</p>
             </div>
           </div>
         </div>
+
+        <!-- Scroll indicator -->
+        <a class="scroll-hint" href="#profile" aria-label="Scroll ke bawah">
+          <span></span>
+        </a>
       </section>
 
+      <!-- ── PROFILE ── -->
       <section class="profile-section" id="profile">
         <div class="section-kicker">01 / Profil</div>
         <figure class="linkedin-banner">
-          <img src="img/banner LinkedIn.png" alt="Banner LinkedIn Aiyub Heriyanto" />
+          <img src="img/banner LinkedIn.png" alt="Banner LinkedIn Aiyub Heriyanto" loading="lazy" />
         </figure>
-        <div class="profile-cards" aria-label="Informasi singkat">
-          <article>
-            <span>D3</span>
+        <div class="profile-cards" aria-label="Statistik singkat">
+          <article class="stat-card">
+            <span class="stat-number">D3</span>
             <p>Computer Engineering student at Politeknik Negeri Jember.</p>
           </article>
-          <article>
-            <span>2 Industries</span>
-            <p>Internship experience at PT Universal Big Data & Otorita IKN.</p>
+          <article class="stat-card">
+            <span class="stat-number">2</span>
+            <p>Internship experience at PT Universal Big Data &amp; Otorita IKN.</p>
           </article>
-          <article>
-            <span>3 focus</span>
-            <p>Full Stack Web Development, IoT, and AI.</p>
+          <article class="stat-card">
+            <span class="stat-number">3+</span>
+            <p>Focus areas: Full Stack Web Development, IoT, and AI.</p>
           </article>
         </div>
         <div class="profile-grid">
@@ -95,130 +138,229 @@
               menjadi Team Leader untuk QuraniBot, chatbot berbasis Rasa Framework, dan ikut berkontribusi dalam tim
               C# web scraping menggunakan Nobox.
             </p>
+            <a class="button primary profile-cta" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">
+              Lihat Profil LinkedIn
+            </a>
           </div>
         </div>
       </section>
 
+      <!-- ── SKILLS ── -->
       <section class="section" id="skills">
         <div class="section-heading">
           <div class="section-kicker">02 / Skill Focus</div>
           <h2>Area teknis yang sedang saya bangun dengan serius.</h2>
         </div>
         <div class="skill-grid">
-          <article class="skill-card">
-            <span>01</span>
+          <article class="skill-card" data-animate>
+            <div class="skill-icon" aria-hidden="true">01</div>
             <h3>Full Stack Web Development</h3>
             <p>Membangun frontend, backend, integrasi API, database, dan alur aplikasi yang siap digunakan.</p>
+            <div class="skill-tags">
+              <span>HTML/CSS</span><span>JavaScript</span><span>Python</span><span>REST API</span>
+            </div>
           </article>
-          <article class="skill-card">
-            <span>02</span>
+          <article class="skill-card" data-animate>
+            <div class="skill-icon" aria-hidden="true">02</div>
             <h3>Internet of Things</h3>
             <p>Mengeksplorasi perangkat terhubung, data sensor, dan cara mengubah konektivitas menjadi solusi digital.</p>
+            <div class="skill-tags">
+              <span>Sensor</span><span>Embedded</span><span>Data</span>
+            </div>
           </article>
-          <article class="skill-card">
-            <span>03</span>
+          <article class="skill-card" data-animate>
+            <div class="skill-icon" aria-hidden="true">03</div>
             <h3>Artificial Intelligence</h3>
             <p>Mempelajari penerapan AI, chatbot, otomasi, dan solusi cerdas yang bisa mendukung pengambilan keputusan.</p>
+            <div class="skill-tags">
+              <span>Rasa NLU</span><span>Chatbot</span><span>Automation</span>
+            </div>
           </article>
-          <article class="skill-card">
-            <span>04</span>
+          <article class="skill-card" data-animate>
+            <div class="skill-icon" aria-hidden="true">04</div>
             <h3>Team Coordination</h3>
             <p>Berpengalaman memimpin tim kecil, mengatur proses pengembangan, dan menjaga komunikasi proyek tetap jelas.</p>
+            <div class="skill-tags">
+              <span>Leadership</span><span>Agile</span><span>Communication</span>
+            </div>
           </article>
         </div>
       </section>
 
+      <!-- ── EXPERIENCE ── -->
       <section class="experience-section" id="experience">
         <div class="section-kicker">03 / Experience</div>
+        <h2 class="experience-title">Perjalanan profesional yang membentuk perspektif saya.</h2>
         <div class="experience-grid">
-          <article class="experience-card current">
-            <p class="role-time">Aug 2026 - December 2026 · 5 months</p>
-            <h3>Artificial Intelligence Intern</h3>
-            <p class="role-meta">Otorita Ibu Kota Nusantara · Deputi Bidang Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan</p>
-            <p class="role-location">Penajam Paser Utara, East Kalimantan, Indonesia · On-site</p>
+          <article class="experience-card current" data-animate>
+            <div class="exp-header">
+              <div>
+                <p class="role-time">Aug 2026 – Dec 2026 · 5 bulan</p>
+                <h3>Artificial Intelligence Intern</h3>
+                <p class="role-meta">Otorita Ibu Kota Nusantara</p>
+                <p class="role-sub">Deputi Bidang Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan</p>
+              </div>
+              <span class="exp-badge">Aktif</span>
+            </div>
+            <p class="role-location">📍 Penajam Paser Utara, Kalimantan Timur · On-site</p>
             <p>
               Mengembangkan pemahaman tentang penerapan teknologi, software, dan solusi digital di lingkungan
-              transformasi hijau dan digital.
+              transformasi hijau dan digital pada ibu kota baru Indonesia.
             </p>
-            <p class="role-skills">Kerja tim · Komunikasi · Artificial Intelligence · Digital Solutions</p>
+            <div class="role-skills-wrap">
+              <span>Kerja Tim</span>
+              <span>Komunikasi</span>
+              <span>Artificial Intelligence</span>
+              <span>Digital Solutions</span>
+            </div>
           </article>
-          <article class="experience-card">
-            <p class="role-time">Dec 2022 - May 2023 · 6 months</p>
-            <h3>Student Intern</h3>
-            <p class="role-meta">PT. Universal Big Data · Apprenticeship</p>
-            <p class="role-location">Ruko Modern Kav A16-A17, Tasikmadu, Lowokwaru, Malang, Jawa Timur · On-site</p>
+
+          <article class="experience-card" data-animate>
+            <div class="exp-header">
+              <div>
+                <p class="role-time">Dec 2022 – May 2023 · 6 bulan</p>
+                <h3>Student Intern</h3>
+                <p class="role-meta">PT. Universal Big Data</p>
+                <p class="role-sub">Apprenticeship</p>
+              </div>
+            </div>
+            <p class="role-location">📍 Ruko Modern Kav A16-A17, Malang, Jawa Timur · On-site</p>
             <p>
-              Menjadi Team Leader untuk team chatbot QuraniBot dan menjadi bagian dari team scrapping marketplace
-              menggunakan Nobox.
+              Menjadi Team Leader untuk team chatbot QuraniBot berbasis Rasa Framework dan berkontribusi dalam
+              tim scraping marketplace menggunakan C# dan Nobox.
             </p>
-            <p class="role-skills">C# · Python · Rasa Framework · Team Leadership · Web Scraping</p>
+            <div class="role-skills-wrap">
+              <span>C#</span>
+              <span>Python</span>
+              <span>Rasa Framework</span>
+              <span>Team Leadership</span>
+              <span>Web Scraping</span>
+            </div>
           </article>
         </div>
       </section>
 
+      <!-- ── PROJECTS ── -->
       <section class="project-section" id="projects">
         <div class="section-heading project-heading">
           <div class="section-kicker">04 / Projects</div>
           <h2>Proyek dan pengalaman yang membentuk cara saya bekerja.</h2>
         </div>
         <div class="project-grid">
-          <article class="project-card featured">
-            <img class="project-thumb" src="img/images.jpg" alt="Thumbnail Rasa Framework untuk proyek QuraniBot" />
+          <!-- Featured -->
+          <article class="project-card featured" data-animate>
+            <div class="project-img-wrap">
+              <img class="project-thumb" src="img/images.jpg" alt="QuraniBot – chatbot berbasis Rasa Framework" loading="lazy" />
+              <div class="project-overlay">
+                <a class="proj-link" href="https://github.com/Aiyub150" target="_blank" rel="noreferrer" aria-label="Lihat di GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
             <div class="project-body">
               <p class="project-type">Chatbot · Team Leadership</p>
               <h3>QuraniBot with Rasa Framework</h3>
               <p>
                 Chatbot yang dikembangkan saat internship di PT Universal Big Data. Saya mengambil peran Team Leader,
-                mengoordinasikan proses pengembangan, kolaborasi tim, dan arah teknis proyek.
+                mengoordinasikan proses pengembangan, kolaborasi tim, dan arah teknis proyek berbasis NLP.
               </p>
               <div class="tag-row">
                 <span>Rasa</span>
-                <span>Chatbot</span>
+                <span>Python</span>
                 <span>NLP</span>
                 <span>Leadership</span>
+                <span>Chatbot</span>
               </div>
             </div>
           </article>
-          <article class="project-card">
-            <img class="project-thumb" src="img/images (1).jpg" alt="Thumbnail C# untuk proyek web scraping" />
+
+          <!-- Card 2 -->
+          <article class="project-card" data-animate>
+            <div class="project-img-wrap">
+              <img class="project-thumb" src="img/images (1).jpg" alt="Web Scraping menggunakan C# dan Nobox" loading="lazy" />
+              <div class="project-overlay">
+                <a class="proj-link" href="https://github.com/Aiyub150" target="_blank" rel="noreferrer" aria-label="Lihat di GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
             <div class="project-body">
-              <p class="project-type">Data Development</p>
+              <p class="project-type">Data Development · C#</p>
               <h3>Web Scraping with Nobox</h3>
-              <p>Kontribusi dalam tim scraping berbasis C# untuk memperkuat pengalaman pada pengolahan dan otomasi data.</p>
+              <p>Kontribusi dalam tim scraping berbasis C# untuk otomasi pengambilan data marketplace, memperkuat pengalaman pengolahan dan pipeline data.</p>
+              <div class="tag-row">
+                <span>C#</span>
+                <span>Nobox</span>
+                <span>Data Pipeline</span>
+              </div>
             </div>
           </article>
-          <article class="project-card">
-            <img class="project-thumb" src="img/RUJ0AuHG-1_vUFNgofROTwY_rGd4_7Qsw.jpeg" alt="Thumbnail Internet of Things" />
+
+          <!-- Card 3 -->
+          <article class="project-card" data-animate>
+            <div class="project-img-wrap">
+              <img class="project-thumb" src="img/RUJ0AuHG-1_vUFNgofROTwY_rGd4_7Qsw.jpeg" alt="Eksplorasi solusi digital IoT dan AI" loading="lazy" />
+              <div class="project-overlay">
+                <a class="proj-link" href="https://github.com/Aiyub150" target="_blank" rel="noreferrer" aria-label="Lihat di GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
             <div class="project-body">
-              <p class="project-type">Exploration</p>
-              <h3>Connected Digital Solutions</h3>
-              <p>Eksplorasi sistem backend, frontend, API, database, dan perangkat terhubung untuk kebutuhan dunia nyata.</p>
+              <p class="project-type">AI Internship · IKN</p>
+              <h3>AI &amp; Digital Solutions – Otorita IKN</h3>
+              <p>Berkontribusi dalam pengembangan dan eksplorasi solusi kecerdasan buatan di lingkungan transformasi digital ibu kota baru Indonesia.</p>
+              <div class="tag-row">
+                <span>AI</span>
+                <span>Digital Gov</span>
+                <span>IoT</span>
+              </div>
             </div>
           </article>
         </div>
       </section>
 
+      <!-- ── CONTACT ── -->
       <section class="contact-section" id="contact">
-        <div>
+        <div class="contact-copy">
           <div class="section-kicker">05 / Contact</div>
           <h2>Mari terhubung untuk belajar, berkolaborasi, atau membangun solusi digital berikutnya.</h2>
+          <p class="contact-sub">Saya terbuka untuk peluang baru, proyek kolaborasi, atau sekadar berbagi ide.</p>
         </div>
         <div class="contact-panel">
-          <a class="contact-link" href="mailto:aiyubheriyanto150@gmail.com">aiyubheriyanto150@gmail.com</a>
-          <a class="contact-link" href="https://github.com/Aiyub150" target="_blank" rel="noreferrer">GitHub · Aiyub150</a>
-          <a class="contact-link" href="https://www.instagram.com/aiyub.150" target="_blank" rel="noreferrer">Instagram · @aiyub.150</a>
-          <a class="button primary" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">
+          <a class="contact-link" href="mailto:aiyubheriyanto150@gmail.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            aiyubheriyanto150@gmail.com
+          </a>
+          <a class="contact-link" href="https://github.com/Aiyub150" target="_blank" rel="noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub · Aiyub150
+          </a>
+          <a class="contact-link" href="https://www.instagram.com/aiyub.150" target="_blank" rel="noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram · @aiyub.150
+          </a>
+          <a class="button primary contact-btn" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             Connect on LinkedIn
           </a>
         </div>
       </section>
     </main>
 
+    <!-- ── FOOTER ── -->
     <footer class="site-footer">
       <span>© 2026 Aiyub Heriyanto</span>
-      <a href="#home">Kembali ke atas</a>
+      <div class="footer-links">
+        <a href="https://github.com/Aiyub150" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="#home">↑ Kembali ke atas</a>
+      </div>
     </footer>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js"></script>
   </body>
 </html>
