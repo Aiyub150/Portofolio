@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Portofolio Aiyub Heriyanto, mahasiswa Computer Engineering dengan fokus Full Stack Web Development, IoT, dan Artificial Intelligence." />
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://aiyub150.github.io/Portofolio/" />
+
     <!-- Open Graph -->
     <meta property="og:title" content="Aiyub Heriyanto | IoT Engineering & Full Stack Web Dev" />
     <meta property="og:description" content="Mahasiswa D3 Teknik Komputer Politeknik Negeri Jember dengan fokus Full Stack Web Development, IoT, dan Artificial Intelligence." />
-    <meta property="og:image" content="img/banner LinkedIn.png" />
+    <meta property="og:image" content="img/banner LinkedIn.webp" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://aiyub150.github.io/Portofolio/" />
 
@@ -16,22 +19,22 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Aiyub Heriyanto | IoT Engineering & Full Stack Web Dev" />
     <meta name="twitter:description" content="Mahasiswa D3 Teknik Komputer dengan fokus Full Stack, IoT, dan AI." />
-    <meta name="twitter:image" content="img/banner LinkedIn.png" />
+    <meta name="twitter:image" content="img/banner LinkedIn.webp" />
 
     <title>Aiyub Heriyanto | IoT Engineering & Full Stack Web Dev</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/profil.png" type="image/png" />
+    <link rel="icon" href="img/profil.webp" type="image/webp" />
 
     <!-- Fonts — preconnect + display=swap (non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
 
-    <!-- Preload LCP image (hero photo) agar browser fetch lebih awal -->
-    <link rel="preload" as="image" href="img/IMG-20250805-WA0057-removebg-preview.png" />
+    <!-- Preload LCP image (hero photo) -->
+    <link rel="preload" as="image" href="img/IMG-20250805-WA0057-removebg-preview.webp" fetchpriority="high" />
 
-    <!-- Swiper CSS — load non-blocking: mulai sebagai print, switch ke all setelah load -->
+    <!-- Swiper CSS — load non-blocking -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
           media="print"
@@ -46,7 +49,8 @@
     <!-- ── HEADER ── -->
     <header class="site-header" data-header>
       <a class="brand" href="#home" aria-label="Aiyub Heriyanto – kembali ke atas">
-        <img class="brand-mark" src="img/profil.png" alt="Foto profil Aiyub Heriyanto" />
+        <img class="brand-mark" src="img/profil.webp" alt="Foto profil Aiyub Heriyanto"
+             width="38" height="38" decoding="async" />
         <span>Aiyub Heriyanto</span>
       </a>
 
@@ -103,9 +107,10 @@
               <div class="orbit-ring orbit-ring--1" aria-hidden="true"></div>
               <div class="orbit-ring orbit-ring--2" aria-hidden="true"></div>
             </div>
-            <img src="img/IMG-20250805-WA0057-removebg-preview.png"
+            <img src="img/IMG-20250805-WA0057-removebg-preview.webp"
                  alt="Foto Aiyub Heriyanto"
                  class="hero-photo"
+                 width="433" height="577"
                  fetchpriority="high"
                  decoding="async" />
             <div class="status-card" aria-label="Posisi saat ini">
@@ -126,7 +131,8 @@
       <section class="profile-section" id="profile">
         <div class="section-kicker">01 / Profil</div>
         <figure class="linkedin-banner">
-          <img src="img/banner LinkedIn.png" alt="Banner LinkedIn Aiyub Heriyanto" loading="lazy" />
+          <img src="img/banner LinkedIn.webp" alt="Banner LinkedIn Aiyub Heriyanto"
+               width="1584" height="396" loading="lazy" decoding="async" />
         </figure>
         <div class="profile-cards" aria-label="Statistik singkat">
           <article class="stat-card">
@@ -269,7 +275,8 @@
           <!-- Featured -->
           <article class="project-card featured" data-animate>
             <div class="project-img-wrap">
-              <img class="project-thumb" src="img/images.jpg" alt="QuraniBot – chatbot berbasis Rasa Framework" loading="lazy" />
+              <img class="project-thumb" src="img/images.webp" alt="QuraniBot – chatbot berbasis Rasa Framework"
+                   width="617" height="324" loading="lazy" decoding="async" />
               <div class="project-overlay">
                 <a class="proj-link" href="https://github.com/Aiyub150" target="_blank" rel="noreferrer" aria-label="Lihat di GitHub">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -297,7 +304,8 @@
           <!-- Card 2 -->
           <article class="project-card" data-animate>
             <div class="project-img-wrap">
-              <img class="project-thumb" src="img/images (1).jpg" alt="Web Scraping menggunakan C# dan Nobox" loading="lazy" />
+              <img class="project-thumb" src="img/images (1).webp" alt="Web Scraping menggunakan C# dan Nobox"
+                   width="632" height="316" loading="lazy" decoding="async" />
               <div class="project-overlay">
                 <a class="proj-link" href="https://github.com/Aiyub150" target="_blank" rel="noreferrer" aria-label="Lihat di GitHub">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -320,7 +328,8 @@
           <!-- Card 3 -->
           <article class="project-card" data-animate>
             <div class="project-img-wrap">
-              <img class="project-thumb" src="img/RUJ0AuHG-1_vUFNgofROTwY_rGd4_7Qsw.jpeg" alt="Eksplorasi solusi digital IoT dan AI" loading="lazy" />
+              <img class="project-thumb" src="img/RUJ0AuHG-1_vUFNgofROTwY_rGd4_7Qsw.webp" alt="Eksplorasi solusi digital IoT dan AI"
+                   width="860" height="520" loading="lazy" decoding="async" />
               <div class="project-overlay">
                 <a class="proj-link" href="https://github.com/Aiyub150" target="_blank" rel="noreferrer" aria-label="Lihat di GitHub">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -364,7 +373,8 @@
             <div class="swiper-slide pano-slide"
                  data-title="Internship di PT. Universal Big Data"
                  data-desc="Dokumentasi sebagai Siswa Magang dari sekolah SMK Negeri 6 Jember di PT. Universal Big Data.">
-              <img src="img/Gallery/Magang Ubig.jpeg" alt="Foto di PT. Universal Big Data" loading="lazy" />
+              <img src="img/Gallery/Magang Ubig.webp" alt="Foto di PT. Universal Big Data"
+                   width="1280" height="960" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
 
@@ -372,7 +382,8 @@
             <div class="swiper-slide pano-slide"
                  data-title="Pameran Aplikasi Pemandian"
                  data-desc="Dokumentasi pada Event Pameran Aplikasi Pemandian bersama Tim Perancang Aplikasi Pemandian di SMK Negeri 6 Jember.">
-              <img src="img/Gallery/Tim Project Aplikasi Pemandian.jpeg" alt="Pameran Aplikasi Pemandian" loading="lazy" />
+              <img src="img/Gallery/Tim Project Aplikasi Pemandian.webp" alt="Pameran Aplikasi Pemandian"
+                   width="1156" height="650" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
 
@@ -380,7 +391,8 @@
             <div class="swiper-slide pano-slide"
                  data-title="Pelantikan Anggota UKM Robotika 2024/2025"
                  data-desc="Dokumentasi Setelah Pelantikan sebagai Anggota dan Bendahara di UKM Robotika Politeknik Negeri Jember.">
-              <img src="img/Gallery/Pelantikan Anggota UKM Robotika.jpeg" alt="Foto Pelantikan Anggota UKM Robotika" loading="lazy" />
+              <img src="img/Gallery/Pelantikan Anggota UKM Robotika.webp" alt="Foto Pelantikan Anggota UKM Robotika"
+                   width="1524" height="1143" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
 
@@ -388,7 +400,8 @@
             <div class="swiper-slide pano-slide"
                  data-title="Pemateri Pemrograman Dasar UKM Robotika"
                  data-desc="Pernah diberikan kepercayaan sebagai Pemateri Pemrograman Dasar untuk anggota baru UKM Robotika tahun 2025/2026.">
-              <img src="img/Gallery/Pemateri UKM 2.jpeg" alt="Pemateri UKM Robotika" loading="lazy" />
+              <img src="img/Gallery/Pemateri UKM 2.webp" alt="Pemateri UKM Robotika"
+                   width="960" height="1280" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
 
@@ -396,7 +409,8 @@
             <div class="swiper-slide pano-slide"
                  data-title="Project FiveSen"
                  data-desc="Project IoT yang dipamerkan di event IMCE 2.0 dan mendapatkan penghargaan Project Favorit di Politeknik Negeri Jember.">
-              <img src="img/Gallery/Project FiveSen.jpeg" alt="Project FiveSen" loading="lazy" />
+              <img src="img/Gallery/Project FiveSen.webp" alt="Project FiveSen"
+                   width="1440" height="1440" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
 
@@ -404,7 +418,8 @@
             <div class="swiper-slide pano-slide"
                  data-title="Perancang Backend Web FiveGate"
                  data-desc="Dokumentasi merancang Backend Web untuk project FiveGate.">
-              <img src="img/Gallery/Proses Rancang Web FiveGate.jpeg" alt="Backend Web FiveGate" loading="lazy" />
+              <img src="img/Gallery/Proses Rancang Web FiveGate.webp" alt="Backend Web FiveGate"
+                   width="1600" height="900" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
 
@@ -412,7 +427,8 @@
             <div class="swiper-slide pano-slide"
                  data-title="Project FiveGate"
                  data-desc="Project yang dikembangkan dari project FiveSen dan dipamerkan di event IMCE 3.0 Politeknik Negeri Jember.">
-              <img src="img/Gallery/Tim Project FiveGate.jpeg" alt="Project FiveGate" loading="lazy" />
+              <img src="img/Gallery/Tim Project FiveGate.webp" alt="Project FiveGate"
+                   width="899" height="1599" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
 
@@ -420,23 +436,26 @@
             <div class="swiper-slide pano-slide"
                  data-title="Seminar Proposal"
                  data-desc="Dokumentasi Seminar Proposal berjudul: Implementasi Machine Learning pada Sistem IoT Berbasis ESP32-CAM untuk Mendeteksi Hand Gesture.">
-              <img src="img/Gallery/Seminar Proposal.jpeg" alt="Seminar Proposal" loading="lazy" />
+              <img src="img/Gallery/Seminar Proposal.webp" alt="Seminar Proposal"
+                   width="1200" height="900" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
 
             <!-- SLIDE 9 -->
             <div class="swiper-slide pano-slide"
                  data-title="Mempelajari Arsitektur Jaringan IKN"
-                 data-desc="Dokumentasi Mengamati dan Memahami Artsitektur jaringan di Data Center Otorita Ibu Kota Nusantara">
-              <img src="img/Gallery/Mengamati Jaringan DC.jpeg" alt="Jaringan DC" loading="lazy" />
+                 data-desc="Dokumentasi Mengamati dan Memahami Arsitektur jaringan di Data Center Otorita Ibu Kota Nusantara.">
+              <img src="img/Gallery/Mengamati Jaringan DC.webp" alt="Mempelajari Arsitektur Jaringan DC IKN"
+                   width="960" height="1280" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
 
             <!-- SLIDE 10 -->
             <div class="swiper-slide pano-slide"
                  data-title="Kursus Pelatihan IBM Bob: Understanding of Agentic Work Flow"
-                 data-desc="Mengikuti Kursus Pelatihan untuk Memahami cara kerja dan prompting pada Agentic AI disampaikan oleh CTO IBM Indonesia Wisu Suntoyo">
-              <img src="img/Gallery/Pelatihan IBM Bob.jpeg" alt="Pelatihan IBM Bob" loading="lazy" />
+                 data-desc="Mengikuti Kursus Pelatihan untuk Memahami cara kerja dan prompting pada Agentic AI disampaikan oleh CTO IBM Indonesia Wisu Suntoyo.">
+              <img src="img/Gallery/Pelatihan IBM Bob.webp" alt="Kursus Pelatihan IBM Bob Agentic AI"
+                   width="1156" height="650" loading="lazy" decoding="async" />
               <div class="pano-slide-overlay" aria-hidden="true"></div>
             </div>
             <!-- Tambahkan slide baru di bawah ini dengan format yang sama -->
@@ -524,7 +543,8 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Scripts di akhir body + defer -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

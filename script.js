@@ -28,9 +28,12 @@ window.addEventListener('scroll', updateHeader, { passive: true });
 
   /* Hormat prefers-reduced-motion: langsung tampilkan teks */
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const lines = JSON.parse(titleEl.dataset.lines || '[]');
-    titleEl.innerHTML = lines.join('<br>');
-
+    try {
+      const lines = JSON.parse(titleEl.dataset.lines || '[]');
+      titleEl.innerHTML = lines.join('<br>');
+    } catch (e) {
+      titleEl.textContent = titleEl.getAttribute('aria-label') || '';
+    }
     descEl.textContent = descEl.dataset.text || '';
     return;
   }
@@ -73,7 +76,12 @@ window.addEventListener('scroll', updateHeader, { passive: true });
     await wait(780);
 
     /* ── FASE 1: Ketik H1 baris per baris ── */
-    const lines = JSON.parse(titleEl.dataset.lines || '[]');
+    let lines = [];
+    try {
+      lines = JSON.parse(titleEl.dataset.lines || '[]');
+    } catch (e) {
+      lines = [titleEl.getAttribute('aria-label') || ''];
+    }
 
     for (let li = 0; li < lines.length; li++) {
       /* Decode HTML entity &amp; → & sebelum diketik */
@@ -235,8 +243,7 @@ function updateActiveNav() {
   });
 }
 
-// Ganti dua listener scroll terpisah dengan satu listener terpadu
-window.removeEventListener('scroll', updateHeader);
+// Scroll handler tunggal dengan rAF throttle — menggabungkan header + active nav
 window.addEventListener('scroll', onScroll, { passive: true });
 updateActiveNav();
 
