@@ -167,6 +167,7 @@ if ('IntersectionObserver' in window && animateEls.length) {
 
 const sections    = document.querySelectorAll('section[id]');
 const navAnchors  = document.querySelectorAll('.nav-links a[href^="#"]');
+let   updateFabs   = () => {};
 let   ticking     = false;
 
 function onScroll() {
@@ -174,6 +175,7 @@ function onScroll() {
     requestAnimationFrame(() => {
       updateHeader();
       updateActiveNav();
+      updateFabs();
       ticking = false;
     });
     ticking = true;
@@ -199,11 +201,11 @@ updateActiveNav();
   const fabWa  = document.querySelector('.fab-wa');
   if (!fabTop || !fabWa) return;
 
-  function updateFabs() {
+  updateFabs = function updateFloatingActions() {
     const visible = window.scrollY > 300;
     fabTop.classList.toggle('is-visible', visible);
     fabWa.classList.toggle('is-visible', visible);
-  }
+  };
 
   updateFabs();
 
@@ -211,7 +213,6 @@ updateActiveNav();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  window.addEventListener('scroll', updateFabs, { passive: true });
 })();
 
 (function initPanoramaSlider() {

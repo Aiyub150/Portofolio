@@ -1061,21 +1061,17 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
 
 .pano-swiper .swiper-slide {
   transition:
-    opacity   500ms var(--ease-out),
-    filter    500ms var(--ease-out);
+    opacity 500ms var(--ease-out),
+    transform 600ms var(--ease-out);
   opacity: 0.55;
-  filter: brightness(0.45);
 }
 
 .pano-swiper .swiper-slide-active {
   opacity: 1 !important;
-  filter: brightness(1) !important;
 }
-
 .pano-swiper .swiper-slide-prev,
 .pano-swiper .swiper-slide-next {
   opacity: 0.7 !important;
-  filter: brightness(0.45) !important;
 }
 
 .pano-slide {
@@ -1092,6 +1088,15 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
     box-shadow 400ms;
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
+.pano-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(7,8,25,0.42);
+  pointer-events: none;
+  transition: opacity 500ms var(--ease-out);
+}
+.swiper-slide-active .pano-slide::after { opacity: 0; }
 
 .pano-swiper .swiper-slide-active .pano-slide {
   transform: scale(1) rotateY(0deg);
