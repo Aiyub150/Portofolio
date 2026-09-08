@@ -1,19 +1,11 @@
-# Python scripts sementara
 *.py
-
-# OS
+docs/
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# Editor
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# Logs
 *.log
-
-# Node (jika suatu saat digunakan)
 node_modules/
