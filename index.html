@@ -21,12 +21,24 @@
     <title>Aiyub Heriyanto | IoT Engineering & Full Stack Web Dev</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23171765'/><text y='72' x='50' text-anchor='middle' font-size='52' font-family='system-ui' font-weight='900' fill='%23ffdc3c'>AH</text></svg>" />
+    <link rel="icon" href="img/profil.png" type="image/png" />
 
-    <!-- Fonts -->
+    <!-- Fonts — preconnect + display=swap (non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Preload LCP image (hero photo) agar browser fetch lebih awal -->
+    <link rel="preload" as="image" href="img/IMG-20250805-WA0057-removebg-preview.png" />
+
+    <!-- Swiper CSS — load non-blocking: mulai sebagai print, switch ke all setelah load -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+          media="print"
+          onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    </noscript>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -34,7 +46,7 @@
     <!-- ── HEADER ── -->
     <header class="site-header" data-header>
       <a class="brand" href="#home" aria-label="Aiyub Heriyanto – kembali ke atas">
-        <span class="brand-mark" aria-hidden="true">AH</span>
+        <img class="brand-mark" src="img/profil.png" alt="Foto profil Aiyub Heriyanto" />
         <span>Aiyub Heriyanto</span>
       </a>
 
@@ -43,6 +55,7 @@
         <a href="#skills">Skill</a>
         <a href="#experience">Pengalaman</a>
         <a href="#projects">Proyek</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Kontak</a>
       </nav>
 
@@ -65,11 +78,13 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">Computer Engineering Student</p>
-            <h1>IoT Engineering<br />&amp; Full Stack<br />Web Dev.</h1>
-            <p class="hero-desc">
-              Saya Aiyub Heriyanto, mahasiswa D3 Teknik Komputer di Politeknik Negeri Jember yang berfokus pada
-              Full Stack Web Development, Internet of Things, dan Artificial Intelligence.
-            </p>
+            <h1 id="hero-title"
+                data-lines='["IoT Engineering","&amp; Full Stack","Web Dev."]'
+                aria-label="IoT Engineering & Full Stack Web Dev."
+            ><span class="typing-cursor" aria-hidden="true"></span></h1>
+            <p class="hero-desc" id="hero-desc"
+               data-text="Saya Aiyub Heriyanto, mahasiswa D3 Teknik Komputer di Politeknik Negeri Jember yang berfokus pada Full Stack Web Development, Internet of Things, dan Artificial Intelligence."
+            ><span class="typing-cursor" aria-hidden="true"></span></p>
             <div class="hero-actions">
               <a class="button primary" href="#projects">Lihat Proyek</a>
               <a class="button secondary" href="#contact">Hubungi Saya</a>
@@ -88,7 +103,11 @@
               <div class="orbit-ring orbit-ring--1" aria-hidden="true"></div>
               <div class="orbit-ring orbit-ring--2" aria-hidden="true"></div>
             </div>
-            <img src="img/IMG-20250805-WA0057-removebg-preview.png" alt="Foto Aiyub Heriyanto" class="hero-photo" />
+            <img src="img/IMG-20250805-WA0057-removebg-preview.png"
+                 alt="Foto Aiyub Heriyanto"
+                 class="hero-photo"
+                 fetchpriority="high"
+                 decoding="async" />
             <div class="status-card" aria-label="Posisi saat ini">
               <span class="status-label">Current Position</span>
               <strong>Intern at Otorita IKN</strong>
@@ -147,7 +166,7 @@
 
       <!-- ── SKILLS ── -->
       <section class="section" id="skills">
-        <div class="section-heading">
+        <div class="section-heading-block">
           <div class="section-kicker">02 / Skill Focus</div>
           <h2>Area teknis yang sedang saya bangun dengan serius.</h2>
         </div>
@@ -242,7 +261,7 @@
 
       <!-- ── PROJECTS ── -->
       <section class="project-section" id="projects">
-        <div class="section-heading project-heading">
+        <div class="section-heading-block">
           <div class="section-kicker">04 / Projects</div>
           <h2>Proyek dan pengalaman yang membentuk cara saya bekerja.</h2>
         </div>
@@ -323,12 +342,156 @@
         </div>
       </section>
 
+      <!-- ── GALLERY ── -->
+      <section class="gallery-section" id="gallery">
+        <div class="section-heading-block">
+          <div class="section-kicker">05 / Gallery</div>
+          <h2>Momen dan dokumentasi perjalanan saya.</h2>
+        </div>
+
+        <!--
+          ╔══════════════════════════════════════════════════════════╗
+          ║  PANORAMA GALLERY — cara menambah foto baru:            ║
+          ║  Duplikasi satu <div class="swiper-slide pano-slide">   ║
+          ║  Ubah src img, data-title, dan data-desc.               ║
+          ║  CSS & JS otomatis menyesuaikan — tidak perlu diubah.   ║
+          ╚══════════════════════════════════════════════════════════╝
+        -->
+        <div class="swiper pano-swiper">
+          <div class="swiper-wrapper">
+
+            <!-- SLIDE 1 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Internship di PT. Universal Big Data"
+                 data-desc="Dokumentasi sebagai Siswa Magang dari sekolah SMK Negeri 6 Jember di PT. Universal Big Data.">
+              <img src="img/Gallery/Magang Ubig.jpeg" alt="Foto di PT. Universal Big Data" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Pameran Aplikasi Pemandian"
+                 data-desc="Dokumentasi pada Event Pameran Aplikasi Pemandian bersama Tim Perancang Aplikasi Pemandian di SMK Negeri 6 Jember.">
+              <img src="img/Gallery/Tim Project Aplikasi Pemandian.jpeg" alt="Pameran Aplikasi Pemandian" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Pelantikan Anggota UKM Robotika 2024/2025"
+                 data-desc="Dokumentasi Setelah Pelantikan sebagai Anggota dan Bendahara di UKM Robotika Politeknik Negeri Jember.">
+              <img src="img/Gallery/Pelantikan Anggota UKM Robotika.jpeg" alt="Foto Pelantikan Anggota UKM Robotika" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- SLIDE 4 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Pemateri Pemrograman Dasar UKM Robotika"
+                 data-desc="Pernah diberikan kepercayaan sebagai Pemateri Pemrograman Dasar untuk anggota baru UKM Robotika tahun 2025/2026.">
+              <img src="img/Gallery/Pemateri UKM 2.jpeg" alt="Pemateri UKM Robotika" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- SLIDE 5 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Project FiveSen"
+                 data-desc="Project IoT yang dipamerkan di event IMCE 2.0 dan mendapatkan penghargaan Project Favorit di Politeknik Negeri Jember.">
+              <img src="img/Gallery/Project FiveSen.jpeg" alt="Project FiveSen" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- SLIDE 6 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Perancang Backend Web FiveGate"
+                 data-desc="Dokumentasi merancang Backend Web untuk project FiveGate.">
+              <img src="img/Gallery/Proses Rancang Web FiveGate.jpeg" alt="Backend Web FiveGate" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- SLIDE 7 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Project FiveGate"
+                 data-desc="Project yang dikembangkan dari project FiveSen dan dipamerkan di event IMCE 3.0 Politeknik Negeri Jember.">
+              <img src="img/Gallery/Tim Project FiveGate.jpeg" alt="Project FiveGate" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- SLIDE 8 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Seminar Proposal"
+                 data-desc="Dokumentasi Seminar Proposal berjudul: Implementasi Machine Learning pada Sistem IoT Berbasis ESP32-CAM untuk Mendeteksi Hand Gesture.">
+              <img src="img/Gallery/Seminar Proposal.jpeg" alt="Seminar Proposal" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- SLIDE 9 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Mempelajari Arsitektur Jaringan IKN"
+                 data-desc="Dokumentasi Mengamati dan Memahami Artsitektur jaringan di Data Center Otorita Ibu Kota Nusantara">
+              <img src="img/Gallery/Mengamati Jaringan DC.jpeg" alt="Jaringan DC" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+
+            <!-- SLIDE 10 -->
+            <div class="swiper-slide pano-slide"
+                 data-title="Kursus Pelatihan IBM Bob: Understanding of Agentic Work Flow"
+                 data-desc="Mengikuti Kursus Pelatihan untuk Memahami cara kerja dan prompting pada Agentic AI disampaikan oleh CTO IBM Indonesia Wisu Suntoyo">
+              <img src="img/Gallery/Pelatihan IBM Bob.jpeg" alt="Pelatihan IBM Bob" loading="lazy" />
+              <div class="pano-slide-overlay" aria-hidden="true"></div>
+            </div>
+            <!-- Tambahkan slide baru di bawah ini dengan format yang sama -->
+
+          </div><!-- /.swiper-wrapper -->
+
+          <!-- Navigation -->
+          <div class="swiper-button-prev pano-btn-prev" aria-label="Slide sebelumnya"></div>
+          <div class="swiper-button-next pano-btn-next" aria-label="Slide berikutnya"></div>
+
+          <!-- Pagination dots -->
+          <div class="swiper-pagination pano-pagination"></div>
+        </div><!-- /.pano-swiper -->
+
+        <!-- Caption — diupdate otomatis JS saat slide berubah -->
+        <div class="pano-caption" id="pano-caption" aria-live="polite">
+          <h3 class="caption-title" id="pano-caption-title"></h3>
+          <p class="caption-desc" id="pano-caption-desc"></p>
+        </div>
+
+      </section>
+
       <!-- ── CONTACT ── -->
       <section class="contact-section" id="contact">
         <div class="contact-copy">
-          <div class="section-kicker">05 / Contact</div>
+          <div class="section-kicker">06 / Contact</div>
           <h2>Mari terhubung untuk belajar, berkolaborasi, atau membangun solusi digital berikutnya.</h2>
           <p class="contact-sub">Saya terbuka untuk peluang baru, proyek kolaborasi, atau sekadar berbagi ide.</p>
+
+          <!-- LinkedIn section links -->
+          <div class="linkedin-sections">
+            <p class="linkedin-sections-label">Lihat langsung di LinkedIn saya:</p>
+            <div class="linkedin-section-links">
+              <a href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/details/experience/" target="_blank" rel="noreferrer" class="li-section-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 3H8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z"/></svg>
+                Experience
+              </a>
+              <a href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/details/education/" target="_blank" rel="noreferrer" class="li-section-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Education
+              </a>
+              <a href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/details/certifications/" target="_blank" rel="noreferrer" class="li-section-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                Licenses &amp; Certs
+              </a>
+              <a href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/details/projects/" target="_blank" rel="noreferrer" class="li-section-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                Projects
+              </a>
+            </div>
+            <p class="linkedin-note">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Data Experience, Education, Sertifikat, dan Projects selalu up-to-date mengikuti profil LinkedIn.
+            </p>
+          </div>
         </div>
         <div class="contact-panel">
           <a class="contact-link" href="mailto:aiyubheriyanto150@gmail.com">
@@ -361,6 +524,7 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
