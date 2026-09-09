@@ -286,11 +286,11 @@ updateActiveNav();
         centeredSlides: true,
         slidesPerView: 1.3,
         spaceBetween: 24,
-        speed: 700,
+        speed: 600,
         grabCursor: true,
 
         autoplay: {
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
