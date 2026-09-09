@@ -331,12 +331,8 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   to   { opacity: 0.5; }
 }
 
-.hero-copy .eyebrow,
-.hero-copy h1,
-.hero-copy .hero-desc,
 .hero-copy .hero-actions,
 .hero-copy .quick-stack,
-.hero-visual,
 .status-card,
 .scroll-hint {
   opacity: 0;
@@ -353,13 +349,14 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
 .hero-copy h1 {
   opacity: 1;
   animation: none;
-  
-  min-height: 1em;
+  min-height: 2.8em;
+  contain: layout;
 }
 .hero-copy .hero-desc {
   opacity: 1;
   animation: none;
-  min-height: 1.6em;
+  min-height: 3.8em;
+  contain: layout;
 }
 .hero-copy .hero-actions {
   animation-name: heroFadeUp;
@@ -371,10 +368,9 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   animation-duration: 500ms;
   animation-delay: 640ms;
 }
+
 .hero-visual {
-  animation-name: heroSlideRight;
-  animation-duration: 800ms;
-  animation-delay: 350ms;
+  opacity: 1;
 }
 .status-card {
   animation-name: heroFadeUp;
@@ -627,7 +623,7 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   box-shadow: var(--shadow-md);
   aspect-ratio: 1584 / 396;
 }
-.linkedin-banner img { width: 100%; height: auto; display: block; }
+.linkedin-banner img { width: 100%; height: 100%; aspect-ratio: 1584 / 396; object-fit: cover; display: block; }
 
 .profile-cards {
   display: grid;
@@ -1008,7 +1004,7 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   gap: 20px;
   padding: 28px clamp(20px, 5vw, 72px);
   background: #070819;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.72);
   font-size: 0.88rem;
   border-top: 1px solid rgba(255,255,255,0.06);
 }
@@ -1017,9 +1013,10 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   gap: 20px;
 }
 .footer-links a {
+  color: rgba(255,255,255,0.85);
   transition: color 150ms;
 }
-.footer-links a:hover { color: rgba(255,255,255,0.8); }
+.footer-links a:hover { color: #ffffff; }
 
 .gallery-section {
   padding: clamp(80px, 10vw, 140px) clamp(20px, 5vw, 72px);
@@ -1162,15 +1159,20 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   margin-top: 36px !important;
 }
 .pano-pagination .swiper-pagination-bullet {
+  position: relative;
+  box-sizing: content-box !important;
   width: 8px !important;
   height: 8px !important;
-  background: rgba(255,255,255,0.3) !important;
+  padding: 10px 4px !important;
+  background: rgba(255,255,255,0.4) !important;
+  background-clip: content-box !important;
   opacity: 1 !important;
   border-radius: 50% !important;
   transition: background 200ms, width 280ms var(--ease-out), border-radius 280ms !important;
 }
 .pano-pagination .swiper-pagination-bullet-active {
   background: var(--yellow) !important;
+  background-clip: content-box !important;
   width: 28px !important;
   border-radius: 4px !important;
 }

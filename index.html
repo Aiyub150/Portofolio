@@ -24,19 +24,30 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" />
+    </noscript>
 
     <link rel="preload" as="image" href="img/IMG-20250805-WA0057-removebg-preview.webp" fetchpriority="high" />
 
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-          media="print"
-          onload="this.media='all'" />
-    <noscript>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    </noscript>
-
     <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aiyub Heriyanto",
+      "jobTitle": "IoT Engineer & Full Stack Web Developer",
+      "url": "https://aiyub150.github.io/Portofolio/",
+      "sameAs": [
+        "https://github.com/Aiyub150",
+        "https://www.linkedin.com/in/aiyub-heriyanto-204441338/",
+        "https://www.instagram.com/aiyub.150"
+      ]
+    }
+    </script>
   </head>
   <body>
 
@@ -76,11 +87,11 @@
             <p class="eyebrow">Computer Engineering Student</p>
             <h1 id="hero-title"
                 data-lines='["IoT Engineering","&amp; Full Stack","Web Dev."]'
-                aria-label="IoT Engineering & Full Stack Web Dev."
-            ><span class="typing-cursor" aria-hidden="true"></span></h1>
+                aria-label="IoT Engineering &amp; Full Stack Web Dev."
+            >IoT Engineering<br>&amp; Full Stack<br>Web Dev.<span class="typing-cursor cursor-done" aria-hidden="true"></span></h1>
             <p class="hero-desc" id="hero-desc"
                data-text="Saya Aiyub Heriyanto, mahasiswa D3 Teknik Komputer di Politeknik Negeri Jember yang berfokus pada Full Stack Web Development, Internet of Things, dan Artificial Intelligence."
-            ><span class="typing-cursor" aria-hidden="true"></span></p>
+            >Saya Aiyub Heriyanto, mahasiswa D3 Teknik Komputer di Politeknik Negeri Jember yang berfokus pada Full Stack Web Development, Internet of Things, dan Artificial Intelligence.<span class="typing-cursor cursor-done" aria-hidden="true"></span></p>
             <div class="hero-actions">
               <a class="button primary" href="#projects">Lihat Proyek</a>
               <a class="button secondary" href="#contact">Hubungi Saya</a>
@@ -122,7 +133,7 @@
         <div class="section-kicker">01 / Profil</div>
         <figure class="linkedin-banner">
           <img src="img/banner LinkedIn.webp" alt="Banner LinkedIn Aiyub Heriyanto"
-               width="1584" height="396" loading="lazy" decoding="async" />
+               width="1584" height="396" loading="lazy" decoding="async" style="aspect-ratio: 1584 / 396;" />
         </figure>
         <div class="profile-cards" aria-label="Statistik singkat">
           <article class="stat-card">
@@ -171,7 +182,7 @@
             <h3>Full Stack Web Development</h3>
             <p>Membangun frontend, backend, integrasi API, database, dan alur aplikasi yang siap digunakan.</p>
             <div class="skill-tags">
-              <span>HTML/CSS</span><span>JavaScript</span><span>Python</span><span>REST API</span>
+              <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>Python</span><span>Laravel</span><span>REST API</span>
             </div>
           </article>
           <article class="skill-card" data-animate>
@@ -426,8 +437,8 @@
 
           </div>
 
-          <div class="swiper-button-prev pano-btn-prev" aria-label="Slide sebelumnya"></div>
-          <div class="swiper-button-next pano-btn-next" aria-label="Slide berikutnya"></div>
+          <button type="button" class="swiper-button-prev pano-btn-prev" aria-label="Slide sebelumnya"></button>
+          <button type="button" class="swiper-button-next pano-btn-next" aria-label="Slide berikutnya"></button>
 
           <div class="swiper-pagination pano-pagination"></div>
         </div>
@@ -497,11 +508,9 @@
       <div class="footer-links">
         <a href="https://github.com/Aiyub150" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="#home">↑ Kembali ke atas</a>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
     <script src="script.js" defer></script>
 
     <div class="fab-group" aria-label="Aksi cepat">
