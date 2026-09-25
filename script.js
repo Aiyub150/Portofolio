@@ -290,7 +290,7 @@ updateActiveNav();
         grabCursor: true,
 
         autoplay: {
-          delay: 3000,
+          delay: 2600,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         },
@@ -321,6 +321,9 @@ updateActiveNav();
           realIndexChange(sw) {
             updateCaption(sw.realIndex);
           },
+          slideChange(sw) {
+            updateCaption(sw.realIndex);
+          },
         },
       });
     }
@@ -346,4 +349,217 @@ updateActiveNav();
   } else {
     loadAndInit();
   }
+})();
+
+(function initExperienceGallery() {
+  const expGalleryData = {
+    ikn: {
+      title: 'Dokumentasi Kegiatan — Otorita IKN',
+      subtitle: '10 Foto Dokumentasi di Lingkungan Otorita Ibu Kota Nusantara',
+      images: [
+        {
+          src: 'img/Gallery/ikn/Site Visit KIPP Batch 4.webp',
+          alt: 'Site Visit KIPP Batch 4 IKN',
+          caption: 'Site Visit KIPP Batch 4 IKN',
+          w: 1600, h: 900
+        },
+        {
+          src: 'img/Gallery/ikn/Mengamati Jaringan DC.webp',
+          alt: 'Mengamati Jaringan Data Center IKN',
+          caption: 'Mengamati Jaringan Data Center IKN',
+          w: 960, h: 1280
+        },
+        {
+          src: 'img/Gallery/ikn/Pelatihan IBM Bob.webp',
+          alt: 'Pelatihan IBM Bob: Agentic Workflow',
+          caption: 'Pelatihan IBM Bob bersama CTO IBM Indonesia Wisu Suntoyo',
+          w: 1156, h: 650
+        },
+        {
+          src: 'img/Gallery/ikn/Site Visit Pembangunan IKN 1.webp',
+          alt: 'Site Visit Pembangunan KIPP IKN',
+          caption: 'Site Visit Pembangunan Infrastruktur KIPP IKN',
+          w: 1600, h: 900
+        },
+        {
+          src: 'img/Gallery/ikn/Diskusi Tim AI Otorita IKN 1.webp',
+          alt: 'Diskusi Teknis Tim AI Otorita IKN',
+          caption: 'Diskusi Tim AI & Transformasi Digital Otorita IKN',
+          w: 1600, h: 1200
+        },
+        {
+          src: 'img/Gallery/ikn/Kegiatan Lapangan Transformasi Digital.webp',
+          alt: 'Kegiatan Lapangan Transformasi Hijau dan Digital',
+          caption: 'Kegiatan Lapangan Transformasi Hijau & Digital IKN',
+          w: 1600, h: 1200
+        },
+        {
+          src: 'img/Gallery/ikn/Site Visit Pembangunan IKN 2.webp',
+          alt: 'Tinjauan Lapangan Proyek Nusantara',
+          caption: 'Tinjauan Lapangan Kawasan Inti Pusat Pemerintahan (KIPP)',
+          w: 1600, h: 899
+        },
+        {
+          src: 'img/Gallery/ikn/Dokumentasi Kantor Otorita IKN.webp',
+          alt: 'Dokumentasi Kantor Otorita IKN',
+          caption: 'Dokumentasi di Area Kantor Otorita Ibu Kota Nusantara',
+          w: 1600, h: 900
+        },
+        {
+          src: 'img/Gallery/ikn/Aktivitas Magang Otorita IKN.webp',
+          alt: 'Aktivitas Mahasiswa Magang Otorita IKN',
+          caption: 'Aktivitas Mahasiswa Magang Direktorat Kecerdasan Buatan',
+          w: 1200, h: 1600
+        },
+        {
+          src: 'img/Gallery/ikn/Kunjungan Proyek Nusantara.webp',
+          alt: 'Kunjungan dan Eksplorasi Proyek Nusantara',
+          caption: 'Kunjungan dan Pengenalan Ekosistem Cerdas Nusantara',
+          w: 1600, h: 900
+        }
+      ]
+    },
+    ubig: {
+      title: 'Dokumentasi Magang — PT. Universal Big Data',
+      subtitle: '5 Foto Dokumentasi Tim & Pengembangan di Malang',
+      images: [
+        {
+          src: 'img/Gallery/ubig/Magang Ubig.webp',
+          alt: 'Dokumentasi Tim Siswa Magang di PT Universal Big Data',
+          caption: 'Dokumentasi Tim Siswa Magang di PT Universal Big Data',
+          w: 1280, h: 960
+        },
+        {
+          src: 'img/Gallery/ubig/Pengembangan QuraniBot Rasa.webp',
+          alt: 'Pengembangan Chatbot QuraniBot Berbasis Rasa Framework',
+          caption: 'Pengembangan Chatbot QuraniBot Berbasis Rasa Framework',
+          w: 1280, h: 964
+        },
+        {
+          src: 'img/Gallery/ubig/Koordinasi Tim Scraping CSharp.webp',
+          alt: 'Koordinasi Tim Web Scraping Marketplace C# & Nobox',
+          caption: 'Koordinasi Tim Web Scraping Marketplace C# & Nobox',
+          w: 1280, h: 960
+        },
+        {
+          src: 'img/Gallery/ubig/Diskusi Teknis Kantor UBIG.webp',
+          alt: 'Diskusi Teknis dan Review Proyek di Kantor UBIG',
+          caption: 'Diskusi Teknis & Review Proyek di Kantor UBIG Malang',
+          w: 1280, h: 960
+        },
+        {
+          src: 'img/Gallery/ubig/Suasana Kerja Internship UBIG.webp',
+          alt: 'Suasana Kerja Kolaboratif Internship di UBIG',
+          caption: 'Suasana Kerja Kolaboratif & Evaluasi Kerja Tim',
+          w: 1280, h: 960
+        }
+      ]
+    }
+  };
+
+  const modalEl     = document.getElementById('exp-modal');
+  const backdropEl  = document.getElementById('exp-modal-backdrop');
+  const closeBtn    = document.getElementById('exp-modal-close');
+  const titleEl     = document.getElementById('exp-modal-title');
+  const subtitleEl  = document.getElementById('exp-modal-subtitle');
+  const gridEl      = document.getElementById('pinterest-grid');
+
+  const lbModal     = document.getElementById('lightbox-modal');
+  const lbBackdrop  = document.getElementById('lightbox-backdrop');
+  const lbCloseBtn  = document.getElementById('lightbox-close');
+  const lbImg       = document.getElementById('lightbox-img');
+  const lbCaption   = document.getElementById('lightbox-caption');
+
+  if (!modalEl || !gridEl) return;
+
+  function openExpModal(key) {
+    const data = expGalleryData[key];
+    if (!data) return;
+
+    if (titleEl) titleEl.textContent = data.title;
+    if (subtitleEl) subtitleEl.textContent = data.subtitle;
+
+    gridEl.innerHTML = '';
+    data.images.forEach(img => {
+      const item = document.createElement('div');
+      item.className = 'pinterest-item';
+      item.setAttribute('role', 'button');
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('aria-label', img.alt);
+
+      const imageEl = document.createElement('img');
+      imageEl.src = img.src;
+      imageEl.alt = img.alt;
+      imageEl.width = img.w;
+      imageEl.height = img.h;
+      imageEl.loading = 'lazy';
+      imageEl.decoding = 'async';
+
+      item.appendChild(imageEl);
+
+      item.addEventListener('click', () => openLightbox(img.src, img.alt));
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(img.src, img.alt);
+        }
+      });
+
+      gridEl.appendChild(item);
+    });
+
+    modalEl.classList.add('is-open');
+    modalEl.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeExpModal() {
+    modalEl.classList.remove('is-open');
+    modalEl.setAttribute('aria-hidden', 'true');
+    if (!lbModal || !lbModal.classList.contains('is-open')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  function openLightbox(src, alt) {
+    if (!lbModal || !lbImg) return;
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    if (lbCaption) lbCaption.textContent = '';
+    lbModal.classList.add('is-open');
+    lbModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lbModal) return;
+    lbModal.classList.remove('is-open');
+    lbModal.setAttribute('aria-hidden', 'true');
+    if (!modalEl || !modalEl.classList.contains('is-open')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  document.querySelectorAll('.exp-gallery-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.exp;
+      openExpModal(key);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeExpModal);
+  if (backdropEl) backdropEl.addEventListener('click', closeExpModal);
+
+  if (lbCloseBtn) lbCloseBtn.addEventListener('click', closeLightbox);
+  if (lbBackdrop) lbBackdrop.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (lbModal && lbModal.classList.contains('is-open')) {
+        closeLightbox();
+      } else if (modalEl && modalEl.classList.contains('is-open')) {
+        closeExpModal();
+      }
+    }
+  });
 })();
