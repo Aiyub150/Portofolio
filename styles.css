@@ -139,6 +139,68 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   gap: 12px;
   flex-shrink: 0;
 }
+
+/* Language Switcher */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-pill);
+  padding: 3px 5px;
+  gap: 2px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 180ms, border-color 180ms;
+}
+
+.site-header.is-solid .lang-switcher {
+  background: rgba(14, 16, 55, 0.06);
+  border-color: rgba(14, 16, 55, 0.15);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 4px 9px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 180ms var(--ease-out);
+  line-height: 1;
+}
+
+.site-header.is-solid .lang-btn {
+  color: rgba(14, 16, 55, 0.65);
+}
+
+.lang-btn:hover {
+  color: var(--white);
+}
+
+.site-header.is-solid .lang-btn:hover {
+  color: var(--navy);
+}
+
+.lang-btn.active {
+  background: var(--yellow);
+  color: var(--navy);
+  box-shadow: 0 2px 8px rgba(255, 220, 60, 0.35);
+}
+
+.site-header.is-solid .lang-btn.active {
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(14, 16, 55, 0.25);
+}
+
+.lang-divider {
+  display: none;
+}
+
 .header-action {
   border: 1.5px solid currentColor;
   border-radius: var(--radius-pill);

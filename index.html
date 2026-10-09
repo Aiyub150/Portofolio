@@ -32,7 +32,9 @@
 
     <link rel="preload" as="image" href="img/hero-aiyub.webp" fetchpriority="high" />
 
-    <link rel="stylesheet" href="styles.css?v=20261008" />
+    <link rel="stylesheet" href="styles.css?v=20261008_lang" />
+
+    <script src="lang.js"></script>
 
     <script type="application/ld+json">
     {
@@ -59,16 +61,21 @@
       </a>
 
       <nav class="nav-links" id="nav-links" aria-label="Navigasi utama">
-        <a href="#profile">Profile</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#gallery">Certificates</a>
-        <a href="#contact">Contact</a>
+        <a href="#profile" data-i18n="nav.profile">Profile</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#gallery" data-i18n="nav.certificates">Certificates</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
       <div class="header-right">
-        <a class="header-action" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button type="button" class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+          <span class="lang-divider" aria-hidden="true">/</span>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <a class="header-action" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer" data-i18n="nav.connect">
           Connect with me
         </a>
         <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-links">
@@ -84,17 +91,18 @@
       <section class="hero" id="home">
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Computer Engineering Student</p>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Computer Engineering Student</p>
             <h1 id="hero-title"
                 data-lines='["IoT Engineering","&amp; Full Stack","Web Dev."]'
                 aria-label="IoT Engineering &amp; Full Stack Web Dev."
             >IoT Engineering<br>&amp; Full Stack<br>Web Dev.<span class="typing-cursor cursor-done" aria-hidden="true"></span></h1>
             <p class="hero-desc" id="hero-desc"
                data-text="Saya Aiyub Heriyanto, mahasiswa D3 Teknik Komputer di Politeknik Negeri Jember yang berfokus pada Full Stack Web Development, Internet of Things, dan Artificial Intelligence."
+               data-i18n="hero.desc"
             >Saya Aiyub Heriyanto, mahasiswa D3 Teknik Komputer di Politeknik Negeri Jember yang berfokus pada Full Stack Web Development, Internet of Things, dan Artificial Intelligence.<span class="typing-cursor cursor-done" aria-hidden="true"></span></p>
             <div class="hero-actions">
-              <a class="button primary" href="#projects">Lihat Proyek</a>
-              <a class="button secondary" href="#contact">Hubungi Saya</a>
+              <a class="button primary" href="#projects" data-i18n="hero.btn_projects">Lihat Proyek</a>
+              <a class="button secondary" href="#contact" data-i18n="hero.btn_contact">Hubungi Saya</a>
             </div>
             <div class="quick-stack" aria-label="Bidang fokus">
               <span>Rasa Framework</span>
@@ -117,9 +125,9 @@
                  fetchpriority="high"
                  decoding="async" />
             <div class="status-card" aria-label="Posisi saat ini">
-              <span class="status-label">Current Position</span>
-              <strong>Intern at Otorita IKN</strong>
-              <p>Deputi Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan</p>
+              <span class="status-label" data-i18n="hero.status_label">Current Position</span>
+              <strong data-i18n="hero.status_title">Intern at Otorita IKN</strong>
+              <p data-i18n="hero.status_desc">Deputi Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan</p>
             </div>
           </div>
         </div>
@@ -130,7 +138,7 @@
       </section>
 
       <section class="profile-section" id="profile">
-        <div class="section-kicker">01 / Profil</div>
+        <div class="section-kicker" data-i18n="profile.kicker">01 / Profil</div>
         <figure class="linkedin-banner">
           <img src="img/banner LinkedIn.webp" alt="Banner LinkedIn Aiyub Heriyanto"
                width="1584" height="396" loading="lazy" decoding="async" style="aspect-ratio: 1584 / 396;" />
@@ -138,33 +146,33 @@
         <div class="profile-cards" aria-label="Statistik singkat">
           <article class="stat-card">
             <span class="stat-number">D3</span>
-            <p>Computer Engineering student at Politeknik Negeri Jember.</p>
+            <p data-i18n="profile.stat_d3">Computer Engineering student at Politeknik Negeri Jember.</p>
           </article>
           <article class="stat-card">
             <span class="stat-number">2</span>
-            <p>Internship experience at PT Universal Big Data &amp; Otorita IKN.</p>
+            <p data-i18n="profile.stat_exp">Internship experience at PT Universal Big Data &amp; Otorita IKN.</p>
           </article>
           <article class="stat-card">
             <span class="stat-number">3+</span>
-            <p>Focus areas: Full Stack Web Development, IoT, and AI.</p>
+            <p data-i18n="profile.stat_focus">Focus areas: Full Stack Web Development, IoT, and AI.</p>
           </article>
         </div>
         <div class="profile-grid">
           <div>
-            <h2>Membangun solusi digital dari web, data, perangkat terhubung, sampai AI.</h2>
+            <h2 data-i18n="profile.heading">Membangun solusi digital dari web, data, perangkat terhubung, sampai AI.</h2>
           </div>
           <div class="profile-text">
-            <p>
+            <p data-i18n="profile.p1">
               Saya sedang menempuh Diploma 3 Teknik Komputer di Politeknik Negeri Jember. Minat utama saya berada
               pada pengembangan aplikasi full stack, integrasi API dan database, IoT, serta pemanfaatan AI untuk
               menyelesaikan masalah nyata.
             </p>
-            <p>
+            <p data-i18n="profile.p2">
               Perjalanan profesional saya dimulai melalui internship 6 bulan di PT Universal Big Data. Di sana saya
               menjadi Team Leader untuk QuraniBot, chatbot berbasis Rasa Framework, dan ikut berkontribusi dalam tim
               C# web scraping menggunakan Nobox.
             </p>
-            <a class="button primary profile-cta" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">
+            <a class="button primary profile-cta" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer" data-i18n="profile.cta">
               Lihat Profil LinkedIn
             </a>
           </div>
@@ -173,38 +181,38 @@
 
       <section class="section" id="skills">
         <div class="section-heading-block">
-          <div class="section-kicker">02 / Skill Focus</div>
-          <h2>Area teknis yang sedang saya bangun dengan serius.</h2>
+          <div class="section-kicker" data-i18n="skills.kicker">02 / Skill Focus</div>
+          <h2 data-i18n="skills.heading">Area teknis yang sedang saya bangun dengan serius.</h2>
         </div>
         <div class="skill-grid">
           <article class="skill-card" data-animate>
             <div class="skill-icon" aria-hidden="true">01</div>
-            <h3>Full Stack Web Development</h3>
-            <p>Membangun frontend, backend, integrasi API, database, dan alur aplikasi yang siap digunakan.</p>
+            <h3 data-i18n="skills.card1_title">Full Stack Web Development</h3>
+            <p data-i18n="skills.card1_desc">Membangun frontend, backend, integrasi API, database, dan alur aplikasi yang siap digunakan.</p>
             <div class="skill-tags">
               <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>Python</span><span>Laravel</span><span>REST API</span>
             </div>
           </article>
           <article class="skill-card" data-animate>
             <div class="skill-icon" aria-hidden="true">02</div>
-            <h3>Internet of Things</h3>
-            <p>Mengeksplorasi perangkat terhubung, data sensor, dan cara mengubah konektivitas menjadi solusi digital.</p>
+            <h3 data-i18n="skills.card2_title">Internet of Things</h3>
+            <p data-i18n="skills.card2_desc">Mengeksplorasi perangkat terhubung, data sensor, dan cara mengubah konektivitas menjadi solusi digital.</p>
             <div class="skill-tags">
               <span>Sensor</span><span>Embedded</span><span>Data</span>
             </div>
           </article>
           <article class="skill-card" data-animate>
             <div class="skill-icon" aria-hidden="true">03</div>
-            <h3>Artificial Intelligence</h3>
-            <p>Mempelajari penerapan AI, chatbot, otomasi, dan solusi cerdas yang bisa mendukung pengambilan keputusan.</p>
+            <h3 data-i18n="skills.card3_title">Artificial Intelligence</h3>
+            <p data-i18n="skills.card3_desc">Mempelajari penerapan AI, chatbot, otomasi, dan solusi cerdas yang bisa mendukung pengambilan keputusan.</p>
             <div class="skill-tags">
               <span>Rasa NLU</span><span>Chatbot</span><span>Automation</span>
             </div>
           </article>
           <article class="skill-card" data-animate>
             <div class="skill-icon" aria-hidden="true">04</div>
-            <h3>Team Coordination</h3>
-            <p>Berpengalaman memimpin tim kecil, mengatur proses pengembangan, dan menjaga komunikasi proyek tetap jelas.</p>
+            <h3 data-i18n="skills.card4_title">Team Coordination</h3>
+            <p data-i18n="skills.card4_desc">Berpengalaman memimpin tim kecil, mengatur proses pengembangan, dan menjaga komunikasi proyek tetap jelas.</p>
             <div class="skill-tags">
               <span>Leadership</span><span>Agile</span><span>Communication</span>
             </div>
@@ -213,20 +221,20 @@
       </section>
 
       <section class="experience-section" id="experience">
-        <div class="section-kicker">03 / Experience</div>
-        <h2 class="experience-title">Perjalanan profesional yang membentuk perspektif saya.</h2>
+        <div class="section-kicker" data-i18n="exp.kicker">03 / Experience</div>
+        <h2 class="experience-title" data-i18n="exp.heading">Perjalanan profesional yang membentuk perspektif saya.</h2>
         <div class="experience-grid">
           <article class="experience-card" data-animate>
             <div class="exp-header">
               <div>
-                <p class="role-time">Dec 2022 – May 2023 · 6 bulan</p>
-                <h3>Student Intern</h3>
+                <p class="role-time" data-i18n="exp.ubig_time">Dec 2022 – May 2023 · 6 bulan</p>
+                <h3 data-i18n="exp.ubig_role">Student Intern</h3>
                 <p class="role-meta">PT. Universal Big Data</p>
-                <p class="role-sub">Apprenticeship</p>
+                <p class="role-sub" data-i18n="exp.ubig_sub">Apprenticeship</p>
               </div>
             </div>
-            <p class="role-location">📍 Ruko Modern Kav A16-A17, Malang, Jawa Timur · On-site</p>
-            <p>
+            <p class="role-location" data-i18n="exp.ubig_location">📍 Ruko Modern Kav A16-A17, Malang, Jawa Timur · On-site</p>
+            <p data-i18n="exp.ubig_desc">
               Menjadi Team Leader untuk team chatbot QuraniBot berbasis Rasa Framework dan berkontribusi dalam
               tim scraping marketplace menggunakan C# dan Nobox.
             </p>
@@ -237,7 +245,7 @@
               <span>Team Leadership</span>
               <span>Web Scraping</span>
             </div>
-            <button type="button" class="exp-gallery-btn" data-exp="ubig" aria-haspopup="dialog">
+            <button type="button" class="exp-gallery-btn" data-exp="ubig" aria-haspopup="dialog" data-i18n="exp.ubig_btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
               Lihat Dokumentasi Magang (5 Foto)
             </button>
@@ -246,15 +254,15 @@
           <article class="experience-card current" data-animate>
             <div class="exp-header">
               <div>
-                <p class="role-time">Aug 2026 – Dec 2026 · 5 bulan</p>
-                <h3>Artificial Intelligence Intern</h3>
+                <p class="role-time" data-i18n="exp.ikn_time">Aug 2026 – Dec 2026 · 5 bulan</p>
+                <h3 data-i18n="exp.ikn_role">Artificial Intelligence Intern</h3>
                 <p class="role-meta">Otorita Ibu Kota Nusantara</p>
-                <p class="role-sub">Deputi Bidang Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan</p>
+                <p class="role-sub" data-i18n="exp.ikn_sub">Deputi Bidang Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan</p>
               </div>
-              <span class="exp-badge">Aktif</span>
+              <span class="exp-badge" data-i18n="exp.ikn_badge">Aktif</span>
             </div>
-            <p class="role-location">📍 Penajam Paser Utara, Kalimantan Timur · On-site</p>
-            <p>
+            <p class="role-location" data-i18n="exp.ikn_location">📍 Penajam Paser Utara, Kalimantan Timur · On-site</p>
+            <p data-i18n="exp.ikn_desc">
               Mengembangkan pemahaman tentang penerapan teknologi, software, dan solusi digital di lingkungan
               transformasi hijau dan digital pada ibu kota baru Indonesia.
             </p>
@@ -264,7 +272,7 @@
               <span>Artificial Intelligence</span>
               <span>Digital Solutions</span>
             </div>
-            <button type="button" class="exp-gallery-btn" data-exp="ikn" aria-haspopup="dialog">
+            <button type="button" class="exp-gallery-btn" data-exp="ikn" aria-haspopup="dialog" data-i18n="exp.ikn_btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
               Lihat Dokumentasi Kegiatan (10 Foto)
             </button>
@@ -274,8 +282,8 @@
 
       <section class="project-section" id="projects">
         <div class="section-heading-block">
-          <div class="section-kicker">04 / Projects</div>
-          <h2>Proyek dan pengalaman yang membentuk cara saya bekerja.</h2>
+          <div class="section-kicker" data-i18n="proj.kicker">04 / Projects</div>
+          <h2 data-i18n="proj.heading">Proyek dan pengalaman yang membentuk cara saya bekerja.</h2>
         </div>
         <div class="project-grid">
 
@@ -292,8 +300,8 @@
             </div>
             <div class="project-body">
               <p class="project-type">SIM - ASET</p>
-              <h3>Sistem Inventaris Manajemen Aset Tingkat Pemerintah Daerah (Pemda)</h3>
-              <p>
+              <h3 data-i18n="proj.simaset_title">Sistem Inventaris Manajemen Aset Tingkat Pemerintah Daerah (Pemda)</h3>
+              <p data-i18n="proj.simaset_desc">
                 Sistem Inventaris Aset Daerah berbasis Laravel untuk mengelola data barang, stok, peminjaman, pengembalian, serta laporan operasional inventaris di lingkungan pemerintah daerah.
               </p>
               <div class="tag-row">
@@ -319,8 +327,8 @@
             </div>
             <div class="project-body">
               <p class="project-type">IsyaratKu-Edge</p>
-              <h3>Machine Learning Pendeteksi Hand Gesture Berbasis IoT</h3>
-              <p>IsyaratKu-Edge adalah sistem pengenalan dan penerjemahan gestur bahasa isyarat secara real-time berbasis Machine Learning untuk perangkat edge. Sistem ini menggabungkan YOLOv8, MediaPipe, 1D-CNN, dan LSTM untuk mendeteksi tangan, mengekstraksi landmark, mengenali pola gestur secara spasial dan temporal, kemudian menerjemahkannya.</p>
+              <h3 data-i18n="proj.isyaratku_title">Machine Learning Pendeteksi Hand Gesture Berbasis IoT</h3>
+              <p data-i18n="proj.isyaratku_desc">IsyaratKu-Edge adalah sistem pengenalan dan penerjemahan gestur bahasa isyarat secara real-time berbasis Machine Learning untuk perangkat edge. Sistem ini menggabungkan YOLOv8, MediaPipe, 1D-CNN, dan LSTM untuk mendeteksi tangan, mengekstraksi landmark, mengenali pola gestur secara spasial dan temporal, kemudian menerjemahkannya.</p>
               <div class="tag-row">
                 <span>Machine Learning</span>
                 <span>Gesture Recognition</span>
@@ -343,8 +351,8 @@
             </div>
             <div class="project-body">
               <p class="project-type">WISMON</p>
-              <h3>Windows System Monitoring</h3>
-              <p>Project monitoring windows yang lebih dari sekedar Task Manager lakukan. Melakukan tindakan pencegahan pada setiap anomali events yang terjadi pada system windows dan bahkan melakukan traffic network pada OS Windows. Ditemani dengan chatbot bernama Dahoo yang dapat membantu user dalam menangani permasalahan pada sistem.</p>
+              <h3 data-i18n="proj.wismon_title">Windows System Monitoring</h3>
+              <p data-i18n="proj.wismon_desc">Project monitoring windows yang lebih dari sekedar Task Manager lakukan. Melakukan tindakan pencegahan pada setiap anomali events yang terjadi pada system windows dan bahkan melakukan traffic network pada OS Windows. Ditemani dengan chatbot bernama Dahoo yang dapat membantu user dalam menangani permasalahan pada sistem.</p>
               <div class="tag-row">
                 <span>Python</span>
                 <span>Chatbot</span>
@@ -366,8 +374,8 @@
             </div>
             <div class="project-body">
               <p class="project-type">FiveGate</p>
-              <h3>Sistem Akses Pintu Berbasi RFID dan Face Capture</h3>
-              <p>FiveGate Project merupakan platform sistem akses pintu berbasis RFID dan Face Capture yang mengintegrasikan teknologi RFID, pengambilan gambar wajah, kamera, dan sistem manajemen berbasis web. Sistem ini dirancang untuk mengelola proses autentikasi pengguna melalui RFID, pengambilan data wajah untuk verifikasi, mengendalikan akses pintu secara otomatis, memantau aktivitas perangkat secara real-time, serta menyimpan riwayat akses untuk kebutuhan monitoring dan audit keamanan.</p>
+              <h3 data-i18n="proj.fivegate_title">Sistem Akses Pintu Berbasis RFID dan Face Capture</h3>
+              <p data-i18n="proj.fivegate_desc">FiveGate Project merupakan platform sistem akses pintu berbasis RFID dan Face Capture yang mengintegrasikan teknologi RFID, pengambilan gambar wajah, kamera, dan sistem manajemen berbasis web. Sistem ini dirancang untuk mengelola proses autentikasi pengguna melalui RFID, pengambilan data wajah untuk verifikasi, mengendalikan akses pintu secara otomatis, memantau aktivitas perangkat secara real-time, serta menyimpan riwayat akses untuk kebutuhan monitoring dan audit keamanan.</p>
               <div class="tag-row">
                 <span>Internet Of Things</span>
                 <span>Laravel 12.x</span>
@@ -392,8 +400,8 @@
             </div>
             <div class="project-body">
               <p class="project-type">Company Profile & Cashier</p>
-              <h3>Aplikasi Kasir Pemandian Patemon Jember</h3>
-              <p>Project yang dibuat pada bulan Mei 2023 tentang Aplikasi Web Kasir dan Company Profile Pemandian Patemon Jember. Dikembangkan lagi pada September 2026 ke versi 2.0.0 menggunakan arsitektur yang masih sama yaitu PHP Native namun dengan peningkatan Role Based Access Control, Don't Repeat Yourself dengan mengambil referensi standart system dari project SIM-ASET</p>
+              <h3 data-i18n="proj.patemon_title">Aplikasi Kasir Pemandian Patemon Jember</h3>
+              <p data-i18n="proj.patemon_desc">Project yang dibuat pada bulan Mei 2023 tentang Aplikasi Web Kasir dan Company Profile Pemandian Patemon Jember. Dikembangkan lagi pada September 2026 ke versi 2.0.0 menggunakan arsitektur yang masih sama yaitu PHP Native namun dengan peningkatan Role Based Access Control, Don't Repeat Yourself dengan mengambil referensi standart system dari project SIM-ASET</p>
               <div class="tag-row">
                 <span>PHP</span>
                 <span>MySQL</span>
@@ -408,8 +416,8 @@
 
       <section class="gallery-section" id="gallery">
         <div class="section-heading-block">
-          <div class="section-kicker">05 / Sertifikat</div>
-          <h2>Sertifikat dan Lisensi saya.</h2>
+          <div class="section-kicker" data-i18n="cert.kicker">05 / Sertifikat</div>
+          <h2 data-i18n="cert.heading">Sertifikat dan Lisensi saya.</h2>
         </div>
         <div class="swiper pano-swiper">
           <div class="swiper-wrapper">
@@ -511,12 +519,12 @@
 
       <section class="contact-section" id="contact">
         <div class="contact-copy">
-          <div class="section-kicker">06 / Contact</div>
-          <h2>Mari terhubung untuk belajar, berkolaborasi, atau membangun solusi digital berikutnya.</h2>
-          <p class="contact-sub">Saya terbuka untuk peluang baru, proyek kolaborasi, atau sekadar berbagi ide.</p>
+          <div class="section-kicker" data-i18n="contact.kicker">06 / Contact</div>
+          <h2 data-i18n="contact.heading">Mari terhubung untuk belajar, berkolaborasi, atau membangun solusi digital berikutnya.</h2>
+          <p class="contact-sub" data-i18n="contact.sub">Saya terbuka untuk peluang baru, proyek kolaborasi, atau sekadar berbagi ide.</p>
 
           <div class="linkedin-sections">
-            <p class="linkedin-sections-label">Lihat langsung di LinkedIn saya:</p>
+            <p class="linkedin-sections-label" data-i18n="contact.li_label">Lihat langsung di LinkedIn saya:</p>
             <div class="linkedin-section-links">
               <a href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/details/experience/" target="_blank" rel="noreferrer" class="li-section-link">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 3H8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z"/></svg>
@@ -537,7 +545,7 @@
             </div>
             <p class="linkedin-note">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-              Data Experience, Education, Sertifikat, dan Projects selalu up-to-date mengikuti profil LinkedIn.
+              <span data-i18n="contact.li_note">Data Experience, Education, Sertifikat, dan Projects selalu up-to-date mengikuti profil LinkedIn.</span>
             </p>
           </div>
         </div>
@@ -554,7 +562,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             Instagram · @aiyub.150
           </a>
-          <a class="button primary contact-btn" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">
+          <a class="button primary contact-btn" href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer" data-i18n="contact.connect_btn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             Connect on LinkedIn
           </a>
@@ -593,7 +601,7 @@
     </div>
 
     <footer class="site-footer">
-      <span>© 2026 Aiyub Heriyanto</span>
+      <span data-i18n="footer.copyright">© 2026 Aiyub Heriyanto</span>
       <div class="footer-links">
         <a href="https://github.com/Aiyub150" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/aiyub-heriyanto-204441338/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -603,10 +611,10 @@
     <script src="script.js" defer></script>
 
     <div class="fab-group" aria-label="Aksi cepat">
-      <button class="fab fab-top" id="fab-top" aria-label="Kembali ke atas" title="Kembali ke atas">
+      <button class="fab fab-top" id="fab-top" aria-label="Kembali ke atas" title="Kembali ke atas" data-i18n-attr="aria-label:fab.top_title;title:fab.top_title">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
       </button>
-      <a class="fab fab-wa" href="https://wa.me/6285604700315" target="_blank" rel="noreferrer" aria-label="Chat via WhatsApp" title="Chat via WhatsApp">
+      <a class="fab fab-wa" href="https://wa.me/6285604700315" target="_blank" rel="noreferrer" aria-label="Chat via WhatsApp" title="Chat via WhatsApp" data-i18n-attr="aria-label:fab.wa_title;title:fab.wa_title">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.109.549 4.09 1.514 5.814L.057 23.286a.75.75 0 0 0 .916.916l5.472-1.457A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.656-.518-5.168-1.418l-.371-.22-3.845 1.023 1.023-3.845-.22-.371A9.959 9.959 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       </a>
     </div>

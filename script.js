@@ -265,23 +265,25 @@ updateActiveNav();
       const descEl    = document.getElementById('pano-caption-desc');
 
       const originalSlides = [...swiperEl.querySelectorAll('.pano-slide')];
-      const slideData = originalSlides.map(s => ({
-        title: s.dataset.title || '',
-        desc:  s.dataset.desc  || '',
-      }));
 
       function updateCaption(realIndex) {
-        const data = slideData[realIndex % slideData.length];
+        const lang = window.currentLang || 'id';
+        const certList = (window.certTranslations && window.certTranslations[lang]) || null;
+        let data = certList ? certList[realIndex % certList.length] : null;
+        if (!data) {
+          const s = originalSlides[realIndex % originalSlides.length];
+          data = s ? { title: s.dataset.title || '', desc: s.dataset.desc || '' } : null;
+        }
         if (!captionEl || !data) return;
         captionEl.classList.add('is-fading');
         setTimeout(() => {
           if (titleEl) titleEl.textContent = data.title;
           if (descEl) descEl.textContent  = data.desc;
           captionEl.classList.remove('is-fading');
-        }, 200);
+        }, 120);
       }
 
-      new Swiper('.pano-swiper', {
+      const swiperInstance = new Swiper('.pano-swiper', {
         loop: true,
         centeredSlides: true,
         slidesPerView: 1.3,
@@ -325,6 +327,12 @@ updateActiveNav();
             updateCaption(sw.realIndex);
           },
         },
+      });
+
+      window.addEventListener('languageChanged', () => {
+        if (swiperInstance) {
+          updateCaption(swiperInstance.realIndex);
+        }
       });
     }
 
@@ -476,8 +484,14 @@ updateActiveNav();
     const data = expGalleryData[key];
     if (!data) return;
 
-    if (titleEl) titleEl.textContent = data.title;
-    if (subtitleEl) subtitleEl.textContent = data.subtitle;
+    if (titleEl) {
+      const tKey = key === 'ikn' ? 'modal.ikn_title' : 'modal.ubig_title';
+      titleEl.textContent = (window.translations && window.translations[window.currentLang] && window.translations[window.currentLang][tKey]) || data.title;
+    }
+    if (subtitleEl) {
+      const sKey = key === 'ikn' ? 'modal.ikn_sub' : 'modal.ubig_sub';
+      subtitleEl.textContent = (window.translations && window.translations[window.currentLang] && window.translations[window.currentLang][sKey]) || data.subtitle;
+    }
 
     gridEl.innerHTML = '';
     data.images.forEach(img => {
