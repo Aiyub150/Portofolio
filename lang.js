@@ -91,6 +91,8 @@ const translations = {
     'exp.ikn_btn': 'Lihat Dokumentasi Kegiatan (10 Foto)',
 
     // Projects Section
+    'proj.btn_visit': 'Kunjungi Web',
+    'proj.btn_repo': 'Kunjungi Repo',
     'proj.kicker': '04 / Proyek',
     'proj.heading': 'Proyek dan pengalaman yang membentuk cara saya bekerja.',
     'proj.simaset_title': 'Sistem Inventaris Manajemen Aset Tingkat Pemerintah Daerah (Pemda)',
@@ -213,6 +215,8 @@ const translations = {
     'exp.ikn_btn': 'View Activity Gallery (10 Photos)',
 
     // Projects Section
+    'proj.btn_visit': 'Visit Web',
+    'proj.btn_repo': 'Visit Repo',
     'proj.kicker': '04 / Projects',
     'proj.heading': 'Projects and experiences that define how I engineer.',
     'proj.simaset_title': 'Regional Government Asset Management & Inventory System',
