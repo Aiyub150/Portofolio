@@ -22,8 +22,8 @@ const translations = {
     'hero.btn_projects': 'Lihat Proyek',
     'hero.btn_contact': 'Hubungi Saya',
     'hero.status_label': 'Posisi Saat Ini',
-    'hero.status_title': 'Intern di Otorita IKN',
-    'hero.status_desc': 'Deputi Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan',
+    'hero.status_title': 'Artificial Intelligence Intern',
+    'hero.status_desc': 'Otorita Ibu Kota Nusantara · Deputi Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan',
 
     // Profile Section
     'profile.kicker': '01 / Profil',
@@ -52,7 +52,7 @@ const translations = {
     'profile.lead': 'Berbasis di Jember, Jawa Timur. Saya memadukan rekayasa backend berkinerja tinggi, arsitektur web modern, dan sistem IoT terhubung untuk menciptakan solusi komputasi yang efisien dan berdampak nyata.',
     'profile.loc': 'Jember, Jawa Timur, Indonesia',
     'profile.edu': 'D3 Teknik Komputer · Politeknik Negeri Jember',
-    'profile.intern_history': 'Alumni Magang Otorita IKN (Direktorat AI) & PT UBIG',
+    'profile.intern_history': 'Pernah Internship di Otorita IKN (Direktorat AI) & PT UBIG',
     'profile.cta': 'Lihat Profil LinkedIn',
 
     // Terminal Component
@@ -144,8 +144,8 @@ const translations = {
     'hero.btn_projects': 'View Projects',
     'hero.btn_contact': 'Contact Me',
     'hero.status_label': 'Current Position',
-    'hero.status_title': 'Intern at Otorita IKN',
-    'hero.status_desc': 'Deputy for Green & Digital Transformation · Directorate of Artificial Intelligence',
+    'hero.status_title': 'Artificial Intelligence Intern',
+    'hero.status_desc': 'Otorita Ibu Kota Nusantara · Deputy for Green and Digital Transformation · Directorate of Artificial Intelligence',
 
     // Profile Section
     'profile.kicker': '01 / Profile',
@@ -174,7 +174,7 @@ const translations = {
     'profile.lead': 'Based in Jember, East Java. I combine high-performance backend engineering, modern web architectures, and connected IoT systems to engineer efficient, high-impact solutions.',
     'profile.loc': 'Jember, East Java, Indonesia',
     'profile.edu': 'Computer Engineering Diploma · Politeknik Negeri Jember',
-    'profile.intern_history': 'Former Intern at Otorita IKN (Directorate of AI) & PT UBIG',
+    'profile.intern_history': 'Prior Industry Internships at Otorita IKN (Directorate of AI) & PT UBIG',
     'profile.cta': 'View LinkedIn Profile',
 
     // Terminal Component

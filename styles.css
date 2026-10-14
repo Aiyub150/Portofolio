@@ -1311,9 +1311,43 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 16px;
 }
+
+.exp-company-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.exp-logo-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.experience-card:hover .exp-logo-wrap {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 220, 60, 0.25);
+}
+
+.exp-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .exp-badge {
   flex-shrink: 0;
   display: inline-flex;
@@ -2037,6 +2071,16 @@ section.section-enter {
 @media (max-width: 680px) {
   .fab-group { bottom: 20px; padding: 0 16px; }
   .fab { width: 44px; height: 44px; }
+
+  .exp-company-group {
+    gap: 12px;
+  }
+  .exp-logo-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    padding: 5px;
+  }
 
   .experience-grid {
     padding-left: 48px;
