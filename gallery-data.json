@@ -1,7 +1,7 @@
 {
   "ikn": {
-    "title": "Dokumentasi Kegiatan — Otorita IKN",
-    "subtitle": "Dokumentasi di Lingkungan Otorita Ibu Kota Nusantara",
+    "title": "Dokumentasi Kegiatan — IKN",
+    "subtitle": "Galeri Foto Dokumentasi IKN",
     "images": [
       {
         "src": "img/Gallery/ikn/Aktivitas Magang Otorita IKN.webp",
@@ -83,8 +83,8 @@
     ]
   },
   "ubig": {
-    "title": "Dokumentasi Magang — PT. Universal Big Data",
-    "subtitle": "Dokumentasi Tim & Pengembangan di Malang",
+    "title": "Dokumentasi Kegiatan — UBIG",
+    "subtitle": "Galeri Foto Dokumentasi UBIG",
     "images": [
       {
         "src": "img/Gallery/ubig/Diskusi Teknis Kantor UBIG.webp",
