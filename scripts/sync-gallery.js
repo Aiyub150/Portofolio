@@ -57,18 +57,31 @@ function scanFolder(folderKey, dirRel) {
   });
 }
 
-const galleryData = {
-  ikn: {
-    title: 'Dokumentasi Kegiatan — Otorita IKN',
-    subtitle: 'Dokumentasi di Lingkungan Otorita Ibu Kota Nusantara',
-    images: scanFolder('ikn', 'img/Gallery/ikn')
-  },
-  ubig: {
-    title: 'Dokumentasi Magang — PT. Universal Big Data',
-    subtitle: 'Dokumentasi Tim & Pengembangan di Malang',
-    images: scanFolder('ubig', 'img/Gallery/ubig')
-  }
-};
+function scanAllGalleries() {
+  const rootDir = path.resolve(__dirname, '..');
+  const galleryBaseDir = path.join(rootDir, 'img/Gallery');
+  const result = {};
+
+  if (!fs.existsSync(galleryBaseDir)) return result;
+
+  const subdirs = fs.readdirSync(galleryBaseDir, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name);
+
+  subdirs.forEach(folderName => {
+    const key = folderName.toLowerCase();
+    const images = scanFolder(key, `img/Gallery/${folderName}`);
+    result[key] = {
+      title: `Dokumentasi Kegiatan — ${folderName.toUpperCase()}`,
+      subtitle: `Galeri Foto Dokumentasi ${folderName.toUpperCase()}`,
+      images
+    };
+  });
+
+  return result;
+}
+
+const galleryData = scanAllGalleries();
 
 const rootDir = path.resolve(__dirname, '..');
 const outPath = path.join(rootDir, 'gallery-data.json');

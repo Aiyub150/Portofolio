@@ -375,22 +375,18 @@ updateActiveNav();
 
   function updateButtonCounts() {
     const lang = window.currentLang || 'id';
-    const iknCount = expGalleryData.ikn.images.length;
-    const ubigCount = expGalleryData.ubig.images.length;
 
-    const iknBtnSpan = document.querySelector('.exp-gallery-btn[data-exp="ikn"] span');
-    if (iknBtnSpan) {
-      iknBtnSpan.textContent = lang === 'en'
-        ? `View Activity Gallery (${iknCount} Photos)`
-        : `Lihat Dokumentasi Kegiatan (${iknCount} Foto)`;
-    }
-
-    const ubigBtnSpan = document.querySelector('.exp-gallery-btn[data-exp="ubig"] span');
-    if (ubigBtnSpan) {
-      ubigBtnSpan.textContent = lang === 'en'
-        ? `View Internship Gallery (${ubigCount} Photos)`
-        : `Lihat Dokumentasi Magang (${ubigCount} Foto)`;
-    }
+    document.querySelectorAll('.exp-gallery-btn[data-exp]').forEach(btn => {
+      const key = btn.dataset.exp;
+      const data = expGalleryData[key];
+      const count = (data && data.images) ? data.images.length : 0;
+      const span = btn.querySelector('span');
+      if (span) {
+        span.textContent = lang === 'en'
+          ? `View Documentation (${count} Photos)`
+          : `Lihat Dokumentasi (${count} Foto)`;
+      }
+    });
   }
 
   // Load manifest dynamically
@@ -400,7 +396,7 @@ updateActiveNav();
       return res.json();
     })
     .then(data => {
-      if (data && data.ikn && data.ubig) {
+      if (data && typeof data === 'object') {
         expGalleryData = data;
         updateButtonCounts();
       }
@@ -431,11 +427,11 @@ updateActiveNav();
     if (!data) return;
 
     if (titleEl) {
-      const tKey = key === 'ikn' ? 'modal.ikn_title' : 'modal.ubig_title';
+      const tKey = `modal.${key}_title`;
       titleEl.textContent = (window.translations && window.translations[window.currentLang] && window.translations[window.currentLang][tKey]) || data.title;
     }
     if (subtitleEl) {
-      const sKey = key === 'ikn' ? 'modal.ikn_sub' : 'modal.ubig_sub';
+      const sKey = `modal.${key}_sub`;
       subtitleEl.textContent = (window.translations && window.translations[window.currentLang] && window.translations[window.currentLang][sKey]) || data.subtitle;
     }
 
