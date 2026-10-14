@@ -80,7 +80,6 @@ const translations = {
     'exp.ubig_sub': 'Apprenticeship / Magang',
     'exp.ubig_location': '📍 Ruko Modern Kav A16-A17, Malang, Jawa Timur · On-site',
     'exp.ubig_desc': 'Menjadi Team Leader untuk team chatbot QuraniBot berbasis Rasa Framework dan berkontribusi dalam tim scraping marketplace menggunakan C# dan Nobox.',
-    'exp.ubig_btn': 'Lihat Dokumentasi Magang (5 Foto)',
 
     'exp.ikn_time': 'Aug 2026 – Dec 2026 · 5 bulan',
     'exp.ikn_badge': 'Aktif',
@@ -88,7 +87,6 @@ const translations = {
     'exp.ikn_sub': 'Deputi Bidang Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan',
     'exp.ikn_location': '📍 Penajam Paser Utara, Kalimantan Timur · On-site',
     'exp.ikn_desc': 'Mengembangkan pemahaman tentang penerapan teknologi, software, dan solusi digital di lingkungan transformasi hijau dan digital pada ibu kota baru Indonesia.',
-    'exp.ikn_btn': 'Lihat Dokumentasi Kegiatan (10 Foto)',
 
     // Projects Section
     'proj.btn_visit': 'Kunjungi Web',
@@ -203,8 +201,7 @@ const translations = {
     'exp.ubig_role': 'Student Intern',
     'exp.ubig_sub': 'Apprenticeship',
     'exp.ubig_location': '📍 Ruko Modern Kav A16-A17, Malang, East Java · On-site',
-    'exp.ubig_desc': 'Served as Team Leader for the QuraniBot chatbot team using Rasa Framework and contributed to the marketplace scraping team with C# and Nobox.',
-    'exp.ubig_btn': 'View Internship Gallery (5 Photos)',
+    'exp.ubig_desc': 'Led the development of QuraniBot using the Rasa Framework and contributed to the marketplace web scraping team with C# and Nobox.',
 
     'exp.ikn_time': 'Aug 2026 – Dec 2026 · 5 months',
     'exp.ikn_badge': 'Active',
@@ -212,7 +209,6 @@ const translations = {
     'exp.ikn_sub': 'Deputy for Green & Digital Transformation · Directorate of Artificial Intelligence',
     'exp.ikn_location': '📍 Penajam Paser Utara, East Kalimantan · On-site',
     'exp.ikn_desc': 'Developing hands-on insights into cutting-edge technology, enterprise software, and smart digital solutions within Indonesia\'s new capital.',
-    'exp.ikn_btn': 'View Activity Gallery (10 Photos)',
 
     // Projects Section
     'proj.btn_visit': 'Visit Web',

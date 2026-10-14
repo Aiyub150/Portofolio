@@ -382,9 +382,19 @@ updateActiveNav();
       const count = (data && data.images) ? data.images.length : 0;
       const span = btn.querySelector('span');
       if (span) {
-        span.textContent = lang === 'en'
-          ? `View Documentation (${count} Photos)`
-          : `Lihat Dokumentasi (${count} Foto)`;
+        if (key === 'ikn') {
+          span.textContent = lang === 'en'
+            ? `View Activity Gallery (${count} Photos)`
+            : `Lihat Dokumentasi Kegiatan (${count} Foto)`;
+        } else if (key === 'ubig') {
+          span.textContent = lang === 'en'
+            ? `View Internship Gallery (${count} Photos)`
+            : `Lihat Dokumentasi Magang (${count} Foto)`;
+        } else {
+          span.textContent = lang === 'en'
+            ? `View Documentation (${count} Photos)`
+            : `Lihat Dokumentasi (${count} Foto)`;
+        }
       }
     });
   }
