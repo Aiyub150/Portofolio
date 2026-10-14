@@ -5,6 +5,7 @@ function cleanCaption(filename) {
   const nameWithoutExt = path.parse(filename).name;
   return nameWithoutExt
     .replace(/^WhatsApp Image.*$/i, 'Dokumentasi Lapangan Nusantara')
+    .replace(/\s*\(\d+\)$/, '')
     .replace(/[-_]/g, ' ')
     .trim();
 }
