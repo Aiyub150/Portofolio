@@ -694,39 +694,363 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
 .profile-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin: 20px 0 60px;
+  gap: 18px;
+  margin: 24px 0 64px;
 }
+
 .stat-card {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 28px 24px;
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
   background: var(--paper);
   box-shadow: var(--shadow-sm);
-  transition: transform 220ms var(--ease-out), box-shadow 220ms;
+  display: flex;
+  flex-direction: column;
+  transition: transform 220ms var(--ease-out), box-shadow 220ms, border-color 200ms;
 }
-.stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.stat-number {
-  display: block;
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 240ms var(--ease-out);
+}
+
+.stat-card-edu::before { background: linear-gradient(90deg, #2563eb, #60a5fa); }
+.stat-card-exp::before { background: linear-gradient(90deg, #059669, #34d399); }
+.stat-card-proj::before { background: linear-gradient(90deg, #d97706, #fbbf24); }
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(11, 15, 25, 0.08);
+}
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 14px;
-  color: var(--navy);
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.03em;
 }
-.stat-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+
+.stat-badge {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.stat-badge-blue {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.stat-badge-green {
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+}
+
+.stat-badge-amber {
+  background: rgba(217, 119, 6, 0.1);
+  color: #d97706;
+}
+
+.stat-category {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+}
+
+.stat-headline {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.stat-number {
+  color: var(--navy);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.stat-sub {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+.stat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.stat-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--soft);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
+.stat-tag-highlight {
+  background: rgba(23, 23, 101, 0.06);
+  color: var(--navy);
+  border-color: rgba(23, 23, 101, 0.15);
+}
+
+.stat-desc {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  margin-top: auto;
+}
+
 
 .profile-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);
-  gap: clamp(32px, 6vw, 88px);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 1.25fr);
+  gap: clamp(32px, 5vw, 68px);
   align-items: start;
 }
 
-.profile-text p { color: var(--muted); line-height: 1.8; }
-.profile-text p + p { margin-top: 16px; }
-.profile-cta { margin-top: 28px; }
+.profile-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-top: 14px;
+}
+
+.profile-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 22px 0 10px;
+  padding: 16px 18px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
+.pm-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.pm-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.profile-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.profile-gh {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--navy);
+  background: var(--paper);
+  transition: all 180ms var(--ease-out);
+}
+.profile-gh:hover {
+  background: var(--soft);
+  border-color: var(--navy);
+  color: var(--navy);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* CLI Terminal Window */
+.terminal-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  background: #090d16;
+  border: 1px solid #252d3d;
+  box-shadow: 0 18px 48px rgba(11, 15, 25, 0.28), 0 2px 10px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  color: #f0f6fc;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  transition: transform 240ms var(--ease-out), box-shadow 240ms, border-color 200ms;
+}
+.terminal-card:hover {
+  transform: translateY(-4px);
+  border-color: #3b475c;
+  box-shadow: 0 24px 60px rgba(11, 15, 25, 0.38);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+  padding: 0 16px;
+  background: #141923;
+  border-bottom: 1px solid #202736;
+}
+
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
+.terminal-title {
+  font-size: 0.76rem;
+  color: #8b949e;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.terminal-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #58a6ff;
+  background: rgba(88, 166, 255, 0.12);
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+}
+
+.terminal-body {
+  padding: 20px 22px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.terminal-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.t-prompt {
+  color: #38bdae;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.t-cmd {
+  color: #f0f6fc;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.terminal-output {
+  padding-left: 2px;
+}
+
+.t-name {
+  color: #8b949e;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.t-about p {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #c9d1d9;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.t-about p:last-child {
+  margin-bottom: 0;
+}
+
+.t-status {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.84rem;
+}
+
+.status-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status-tag {
+  color: #22c55e;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.status-key {
+  color: #79c0ff;
+  font-weight: 600;
+  min-width: 125px;
+  flex-shrink: 0;
+}
+
+.status-val {
+  color: #e2e8f0;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #38bdae;
+  vertical-align: middle;
+  animation: termCursorBlink 1s infinite steps(1);
+  margin-left: 2px;
+}
+
+@keyframes termCursorBlink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
 
 .section-heading-block {
   margin-bottom: 52px;
@@ -750,10 +1074,11 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   contain-intrinsic-size: 0 500px;
 }
 
+/* Skills Grid (2x2 Grid) */
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 .skill-card {
   position: relative;
@@ -766,7 +1091,7 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   transition: transform 240ms var(--ease-out), box-shadow 240ms;
 }
 .skill-card::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 3px;
@@ -778,34 +1103,81 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
 .skill-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 .skill-card:hover::before { transform: scaleX(1); }
 
-.skill-icon {
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.skill-icon-badge {
   display: grid;
-  width: 48px; height: 48px;
   place-items: center;
-  border-radius: 50%;
-  margin-bottom: 60px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(23, 23, 101, 0.06);
+  color: var(--navy);
+  transition: background 200ms, color 200ms;
+}
+.skill-card:hover .skill-icon-badge {
   background: var(--navy);
   color: var(--yellow);
-  font-size: 0.78rem;
-  font-weight: 900;
 }
+
+.skill-card-num {
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: var(--muted-2);
+  letter-spacing: 0.05em;
+}
+
 .skill-card h3 { margin-bottom: 12px; }
 .skill-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.65; }
 
-.skill-tags {
+.tech-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 18px;
+  gap: 8px;
+  margin-top: 22px;
 }
-.skill-tags span {
+
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--soft);
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
-  padding: 4px 10px;
-  background: var(--soft);
-  color: var(--navy);
-  font-size: 0.76rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  transition: all 180ms var(--ease-out);
+}
+.tech-chip:hover {
+  background: var(--white);
+  border-color: var(--blue-2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(23, 23, 101, 0.08);
+}
+
+.chip-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.chip-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  border-radius: 3px;
+}
+.chip-name {
+  white-space: nowrap;
 }
 
 .experience-section {
