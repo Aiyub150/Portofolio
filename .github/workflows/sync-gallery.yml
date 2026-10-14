@@ -1,0 +1,40 @@
+name: Auto Sync Internship Gallery
+
+on:
+  push:
+    paths:
+      - 'img/Gallery/**'
+      - 'scripts/sync-gallery.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-gallery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate Gallery Manifest
+        run: node scripts/sync-gallery.js
+
+      - name: Commit & Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add gallery-data.json
+          if git diff --staged --quiet; then
+            echo "No changes in gallery manifest."
+          else
+            git commit -m "chore(gallery): auto-sync gallery manifest from img/Gallery [skip ci]"
+            git push
+          fi

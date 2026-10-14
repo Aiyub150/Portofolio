@@ -120,9 +120,9 @@ const translations = {
 
     // Modals & UI
     'modal.ubig_title': 'Dokumentasi Magang — PT. Universal Big Data',
-    'modal.ubig_sub': '5 Foto Dokumentasi Tim & Pengembangan di Malang',
+    'modal.ubig_sub': 'Dokumentasi Tim & Pengembangan di Kantor UBIG Malang',
     'modal.ikn_title': 'Dokumentasi Kegiatan — Otorita IKN',
-    'modal.ikn_sub': '10 Foto Dokumentasi di Lingkungan Otorita Ibu Kota Nusantara',
+    'modal.ikn_sub': 'Dokumentasi Lapangan & Kantor di Lingkungan Otorita IKN',
     'fab.top_title': 'Kembali ke atas',
     'fab.wa_title': 'Chat via WhatsApp',
     'footer.copyright': '© 2026 Aiyub Heriyanto'
@@ -244,9 +244,9 @@ const translations = {
 
     // Modals & UI
     'modal.ubig_title': 'Internship Documentation — PT. Universal Big Data',
-    'modal.ubig_sub': '5 Team & Development Documentation Photos in Malang',
+    'modal.ubig_sub': 'Team & Development Documentation at UBIG Office Malang',
     'modal.ikn_title': 'Activity Documentation — Nusantara Capital Authority',
-    'modal.ikn_sub': '10 Documentation Photos at Nusantara Capital City',
+    'modal.ikn_sub': 'Field & Office Documentation at Nusantara Capital Authority',
     'fab.top_title': 'Back to top',
     'fab.wa_title': 'Chat via WhatsApp',
     'footer.copyright': '© 2026 Aiyub Heriyanto'

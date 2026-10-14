@@ -360,110 +360,56 @@ updateActiveNav();
 })();
 
 (function initExperienceGallery() {
-  const expGalleryData = {
+  let expGalleryData = {
     ikn: {
       title: 'Dokumentasi Kegiatan — Otorita IKN',
-      subtitle: '10 Foto Dokumentasi di Lingkungan Otorita Ibu Kota Nusantara',
-      images: [
-        {
-          src: 'img/Gallery/ikn/Site Visit KIPP Batch 4.webp',
-          alt: 'Site Visit KIPP Batch 4 IKN',
-          caption: 'Site Visit KIPP Batch 4 IKN',
-          w: 1600, h: 900
-        },
-        {
-          src: 'img/Gallery/ikn/Mengamati Jaringan DC.webp',
-          alt: 'Mengamati Jaringan Data Center IKN',
-          caption: 'Mengamati Jaringan Data Center IKN',
-          w: 960, h: 1280
-        },
-        {
-          src: 'img/Gallery/ikn/Pelatihan IBM Bob.webp',
-          alt: 'Pelatihan IBM Bob: Agentic Workflow',
-          caption: 'Pelatihan IBM Bob bersama CTO IBM Indonesia Wisu Suntoyo',
-          w: 1156, h: 650
-        },
-        {
-          src: 'img/Gallery/ikn/Site Visit Pembangunan IKN 1.webp',
-          alt: 'Site Visit Pembangunan KIPP IKN',
-          caption: 'Site Visit Pembangunan Infrastruktur KIPP IKN',
-          w: 1600, h: 900
-        },
-        {
-          src: 'img/Gallery/ikn/Diskusi Tim AI Otorita IKN 1.webp',
-          alt: 'Diskusi Teknis Tim AI Otorita IKN',
-          caption: 'Diskusi Tim AI & Transformasi Digital Otorita IKN',
-          w: 1600, h: 1200
-        },
-        {
-          src: 'img/Gallery/ikn/Kegiatan Lapangan Transformasi Digital.webp',
-          alt: 'Kegiatan Lapangan Transformasi Hijau dan Digital',
-          caption: 'Kegiatan Lapangan Transformasi Hijau & Digital IKN',
-          w: 1600, h: 1200
-        },
-        {
-          src: 'img/Gallery/ikn/Site Visit Pembangunan IKN 2.webp',
-          alt: 'Tinjauan Lapangan Proyek Nusantara',
-          caption: 'Tinjauan Lapangan Kawasan Inti Pusat Pemerintahan (KIPP)',
-          w: 1600, h: 899
-        },
-        {
-          src: 'img/Gallery/ikn/Dokumentasi Kantor Otorita IKN.webp',
-          alt: 'Dokumentasi Kantor Otorita IKN',
-          caption: 'Dokumentasi di Area Kantor Otorita Ibu Kota Nusantara',
-          w: 1600, h: 900
-        },
-        {
-          src: 'img/Gallery/ikn/Aktivitas Magang Otorita IKN.webp',
-          alt: 'Aktivitas Mahasiswa Magang Otorita IKN',
-          caption: 'Aktivitas Mahasiswa Magang Direktorat Kecerdasan Buatan',
-          w: 1200, h: 1600
-        },
-        {
-          src: 'img/Gallery/ikn/Kunjungan Proyek Nusantara.webp',
-          alt: 'Kunjungan dan Eksplorasi Proyek Nusantara',
-          caption: 'Kunjungan dan Pengenalan Ekosistem Cerdas Nusantara',
-          w: 1600, h: 900
-        }
-      ]
+      subtitle: 'Dokumentasi di Lingkungan Otorita Ibu Kota Nusantara',
+      images: []
     },
     ubig: {
       title: 'Dokumentasi Magang — PT. Universal Big Data',
-      subtitle: '5 Foto Dokumentasi Tim & Pengembangan di Malang',
-      images: [
-        {
-          src: 'img/Gallery/ubig/Magang Ubig.webp',
-          alt: 'Dokumentasi Tim Siswa Magang di PT Universal Big Data',
-          caption: 'Dokumentasi Tim Siswa Magang di PT Universal Big Data',
-          w: 1280, h: 960
-        },
-        {
-          src: 'img/Gallery/ubig/Pengembangan QuraniBot Rasa.webp',
-          alt: 'Pengembangan Chatbot QuraniBot Berbasis Rasa Framework',
-          caption: 'Pengembangan Chatbot QuraniBot Berbasis Rasa Framework',
-          w: 1280, h: 964
-        },
-        {
-          src: 'img/Gallery/ubig/Koordinasi Tim Scraping CSharp.webp',
-          alt: 'Koordinasi Tim Web Scraping Marketplace C# & Nobox',
-          caption: 'Koordinasi Tim Web Scraping Marketplace C# & Nobox',
-          w: 1280, h: 960
-        },
-        {
-          src: 'img/Gallery/ubig/Diskusi Teknis Kantor UBIG.webp',
-          alt: 'Diskusi Teknis dan Review Proyek di Kantor UBIG',
-          caption: 'Diskusi Teknis & Review Proyek di Kantor UBIG Malang',
-          w: 1280, h: 960
-        },
-        {
-          src: 'img/Gallery/ubig/Suasana Kerja Internship UBIG.webp',
-          alt: 'Suasana Kerja Kolaboratif Internship di UBIG',
-          caption: 'Suasana Kerja Kolaboratif & Evaluasi Kerja Tim',
-          w: 1280, h: 960
-        }
-      ]
+      subtitle: 'Dokumentasi Tim & Pengembangan di Malang',
+      images: []
     }
   };
+
+  function updateButtonCounts() {
+    const lang = window.currentLang || 'id';
+    const iknCount = expGalleryData.ikn.images.length;
+    const ubigCount = expGalleryData.ubig.images.length;
+
+    const iknBtnSpan = document.querySelector('.exp-gallery-btn[data-exp="ikn"] span');
+    if (iknBtnSpan) {
+      iknBtnSpan.textContent = lang === 'en'
+        ? `View Activity Gallery (${iknCount} Photos)`
+        : `Lihat Dokumentasi Kegiatan (${iknCount} Foto)`;
+    }
+
+    const ubigBtnSpan = document.querySelector('.exp-gallery-btn[data-exp="ubig"] span');
+    if (ubigBtnSpan) {
+      ubigBtnSpan.textContent = lang === 'en'
+        ? `View Internship Gallery (${ubigCount} Photos)`
+        : `Lihat Dokumentasi Magang (${ubigCount} Foto)`;
+    }
+  }
+
+  // Load manifest dynamically
+  fetch('gallery-data.json?v=' + Date.now())
+    .then(res => {
+      if (!res.ok) throw new Error('Network response not ok');
+      return res.json();
+    })
+    .then(data => {
+      if (data && data.ikn && data.ubig) {
+        expGalleryData = data;
+        updateButtonCounts();
+      }
+    })
+    .catch(err => {
+      console.warn('Could not load gallery-data.json, using fallback data:', err);
+    });
+
+  window.addEventListener('languageChanged', updateButtonCounts);
 
   const modalEl     = document.getElementById('exp-modal');
   const backdropEl  = document.getElementById('exp-modal-backdrop');

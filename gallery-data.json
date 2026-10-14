@@ -1,0 +1,126 @@
+{
+  "ikn": {
+    "title": "Dokumentasi Kegiatan — Otorita IKN",
+    "subtitle": "Dokumentasi di Lingkungan Otorita Ibu Kota Nusantara",
+    "images": [
+      {
+        "src": "img/Gallery/ikn/Aktivitas Magang Otorita IKN.webp",
+        "alt": "Aktivitas Magang Otorita IKN",
+        "caption": "Aktivitas Magang Otorita IKN",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "img/Gallery/ikn/Diskusi Tim AI Otorita IKN 1.webp",
+        "alt": "Diskusi Tim AI Otorita IKN 1",
+        "caption": "Diskusi Tim AI Otorita IKN 1",
+        "w": 1600,
+        "h": 1200
+      },
+      {
+        "src": "img/Gallery/ikn/Dokumentasi Kantor Otorita IKN.webp",
+        "alt": "Dokumentasi Kantor Otorita IKN",
+        "caption": "Dokumentasi Kantor Otorita IKN",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "src": "img/Gallery/ikn/Kegiatan Lapangan Transformasi Digital.webp",
+        "alt": "Kegiatan Lapangan Transformasi Digital",
+        "caption": "Kegiatan Lapangan Transformasi Digital",
+        "w": 1600,
+        "h": 1200
+      },
+      {
+        "src": "img/Gallery/ikn/Kunjungan Proyek Nusantara.webp",
+        "alt": "Kunjungan Proyek Nusantara",
+        "caption": "Kunjungan Proyek Nusantara",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "src": "img/Gallery/ikn/Mengamati Jaringan DC.webp",
+        "alt": "Mengamati Jaringan DC",
+        "caption": "Mengamati Jaringan DC",
+        "w": 960,
+        "h": 1280
+      },
+      {
+        "src": "img/Gallery/ikn/Pelatihan IBM Bob.webp",
+        "alt": "Pelatihan IBM Bob",
+        "caption": "Pelatihan IBM Bob",
+        "w": 1156,
+        "h": 650
+      },
+      {
+        "src": "img/Gallery/ikn/Site Visit KIPP Batch 4.webp",
+        "alt": "Site Visit KIPP Batch 4",
+        "caption": "Site Visit KIPP Batch 4",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "src": "img/Gallery/ikn/Site Visit Pembangunan IKN 1.webp",
+        "alt": "Site Visit Pembangunan IKN 1",
+        "caption": "Site Visit Pembangunan IKN 1",
+        "w": 1600,
+        "h": 900
+      },
+      {
+        "src": "img/Gallery/ikn/Site Visit Pembangunan IKN 2.webp",
+        "alt": "Site Visit Pembangunan IKN 2",
+        "caption": "Site Visit Pembangunan IKN 2",
+        "w": 1600,
+        "h": 899
+      },
+      {
+        "src": "img/Gallery/ikn/WhatsApp Image 2026-09-25 at 13.52.47.jpeg",
+        "alt": "Dokumentasi Lapangan Nusantara",
+        "caption": "Dokumentasi Lapangan Nusantara",
+        "w": 1280,
+        "h": 960
+      }
+    ]
+  },
+  "ubig": {
+    "title": "Dokumentasi Magang — PT. Universal Big Data",
+    "subtitle": "Dokumentasi Tim & Pengembangan di Malang",
+    "images": [
+      {
+        "src": "img/Gallery/ubig/Diskusi Teknis Kantor UBIG.webp",
+        "alt": "Diskusi Teknis Kantor UBIG",
+        "caption": "Diskusi Teknis Kantor UBIG",
+        "w": 1280,
+        "h": 960
+      },
+      {
+        "src": "img/Gallery/ubig/Koordinasi Tim Scraping CSharp.webp",
+        "alt": "Koordinasi Tim Scraping CSharp",
+        "caption": "Koordinasi Tim Scraping CSharp",
+        "w": 1280,
+        "h": 960
+      },
+      {
+        "src": "img/Gallery/ubig/Magang Ubig.webp",
+        "alt": "Magang Ubig",
+        "caption": "Magang Ubig",
+        "w": 1280,
+        "h": 960
+      },
+      {
+        "src": "img/Gallery/ubig/Pengembangan QuraniBot Rasa.webp",
+        "alt": "Pengembangan QuraniBot Rasa",
+        "caption": "Pengembangan QuraniBot Rasa",
+        "w": 1280,
+        "h": 964
+      },
+      {
+        "src": "img/Gallery/ubig/Suasana Kerja Internship UBIG.webp",
+        "alt": "Suasana Kerja Internship UBIG",
+        "caption": "Suasana Kerja Internship UBIG",
+        "w": 1280,
+        "h": 960
+      }
+    ]
+  }
+}
