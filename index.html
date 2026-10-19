@@ -20,22 +20,25 @@
 
     <title>Aiyub Heriyanto | IoT Engineering & Full Stack Web Dev</title>
 
-    <link rel="icon" href="img/profil_aiyub.webp" type="image/webp" />
+    <link rel="icon" href="img/profil_aiyub_icon.webp" type="image/webp" />
 
+    <!-- Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" />
+
+    <!-- Preload Hero Image & Critical Styles -->
+    <link rel="preload" as="image" href="img/hero-aiyub-sm.webp" media="(max-width: 600px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="img/hero-aiyub.webp" media="(min-width: 601px)" fetchpriority="high" />
+    <link rel="preload" as="style" href="styles.min.css?v=20261019" />
+    <link rel="stylesheet" href="styles.min.css?v=20261019" />
+
+    <!-- Google Fonts with font-display: swap -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" />
     </noscript>
 
-    <link rel="preload" as="image" href="img/hero-aiyub.webp" fetchpriority="high" />
-
-    <link rel="stylesheet" href="styles.css?v=20261008_lang" />
-    <link rel="preload" as="fetch" href="gallery-data.json" crossorigin="anonymous" />
-
-    <script src="lang.js" defer></script>
+    <script src="lang.min.js?v=20261019" defer></script>
 
     <script type="application/ld+json">
     {
@@ -56,7 +59,7 @@
 
     <header class="site-header" data-header>
       <a class="brand" href="#home" aria-label="Aiyub Heriyanto – kembali ke atas">
-        <img class="brand-mark" src="img/profil_aiyub.webp" alt="Foto profil Aiyub Heriyanto"
+        <img class="brand-mark" src="img/profil_aiyub_icon.webp" alt="Foto profil Aiyub Heriyanto"
              width="38" height="38" decoding="async" />
         <span>Aiyub Heriyanto</span>
       </a>
@@ -120,9 +123,11 @@
               <div class="orbit-ring orbit-ring--2" aria-hidden="true"></div>
             </div>
             <img src="img/hero-aiyub.webp"
+                 srcset="img/hero-aiyub-sm.webp 380w, img/hero-aiyub.webp 650w"
+                 sizes="(max-width: 600px) 280px, 420px"
                  alt="Foto Aiyub Heriyanto"
                  class="hero-photo"
-                 width="1000" height="1000"
+                 width="650" height="650"
                  fetchpriority="high"
                  decoding="async" />
             <div class="status-card" aria-label="Posisi saat ini">
@@ -141,8 +146,11 @@
       <section class="profile-section" id="profile">
         <div class="section-kicker" data-i18n="profile.kicker">01 / Profil</div>
         <figure class="linkedin-banner">
-          <img src="img/banner LinkedIn.webp" alt="Banner LinkedIn Aiyub Heriyanto"
-               width="1584" height="396" loading="lazy" decoding="async" style="aspect-ratio: 1584 / 396;" />
+          <img src="img/banner LinkedIn.webp"
+               srcset="img/banner_linkedin_sm.webp 720w, img/banner LinkedIn.webp 1200w"
+               sizes="(max-width: 600px) 100vw, 1000px"
+               alt="Banner LinkedIn Aiyub Heriyanto"
+               width="1200" height="300" loading="lazy" decoding="async" style="aspect-ratio: 4 / 1;" />
         </figure>
         <div class="profile-cards" aria-label="Statistik singkat">
           <!-- Card 1: Pendidikan Polije -->
@@ -931,7 +939,7 @@
       </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.min.js?v=20261019_ubig" defer></script>
 
     <div class="fab-group" aria-label="Aksi cepat">
       <button class="fab fab-top" id="fab-top" aria-label="Kembali ke atas" title="Kembali ke atas" data-i18n-attr="aria-label:fab.top_title;title:fab.top_title">

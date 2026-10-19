@@ -10,3 +10,6 @@ desktop.ini
 *.log
 node_modules/
 IDEA.md
+lh_report*.json
+*_verified.png
+*.tmp
