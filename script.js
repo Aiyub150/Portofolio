@@ -449,17 +449,35 @@ updateActiveNav();
       subtitleEl.textContent = (window.translations && window.translations[window.currentLang] && window.translations[window.currentLang][sKey]) || data.subtitle;
     }
 
+    // Caption per experience key for both languages
+    const captionDict = {
+      id: {
+        ikn: 'Dokumentasi Magang Di Otorita IKN',
+        ukm_robotika: 'Dokumentasi Kegiatan Di UKM Robotika',
+        ubig: 'Dokumentasi Magang Di PT. Universal Big Data'
+      },
+      en: {
+        ikn: 'Internship Documentation at Nusantara Capital Authority',
+        ukm_robotika: 'Activity Documentation at IR-64 Robotics',
+        ubig: 'Internship Documentation at PT. Universal Big Data'
+      }
+    };
+    const currentLang = localStorage.getItem('portfolio_lang') || 'id';
+    const activeCaption = (captionDict[currentLang] && captionDict[currentLang][key]) ||
+                          (captionDict.id[key]) ||
+                          'Dokumentasi Kegiatan';
+
     gridEl.innerHTML = '';
     data.images.forEach(img => {
       const item = document.createElement('div');
       item.className = 'pinterest-item';
       item.setAttribute('role', 'button');
       item.setAttribute('tabindex', '0');
-      item.setAttribute('aria-label', img.alt);
+      item.setAttribute('aria-label', activeCaption);
 
       const imageEl = document.createElement('img');
       imageEl.src = img.src;
-      imageEl.alt = img.alt;
+      imageEl.alt = activeCaption;
       imageEl.width = img.w || 800;
       imageEl.height = img.h || 600;
       imageEl.loading = 'lazy';
@@ -467,12 +485,10 @@ updateActiveNav();
 
       item.appendChild(imageEl);
 
-      if (img.caption) {
-        const capEl = document.createElement('div');
-        capEl.className = 'pinterest-caption-overlay';
-        capEl.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>${img.caption}</span>`;
-        item.appendChild(capEl);
-      }
+      const capEl = document.createElement('div');
+      capEl.className = 'pinterest-caption-overlay';
+      capEl.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>${activeCaption}</span>`;
+      item.appendChild(capEl);
 
       item.addEventListener('click', () => openLightbox(img.src, img.alt));
       item.addEventListener('keydown', (e) => {
