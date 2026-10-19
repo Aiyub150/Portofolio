@@ -1,10 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 
-function cleanCaption(filename) {
+function cleanCaption(folderKey, filename) {
   const nameWithoutExt = path.parse(filename).name;
+  if (nameWithoutExt.startsWith('WhatsApp Image')) {
+    if (folderKey === 'ukm_robotika') {
+      return 'Dokumentasi Kegiatan UKM Robotika IR-64';
+    } else if (folderKey === 'ikn') {
+      return 'Dokumentasi Lapangan Nusantara';
+    } else {
+      return 'Dokumentasi Kegiatan';
+    }
+  }
   return nameWithoutExt
-    .replace(/^WhatsApp Image.*$/i, 'Dokumentasi Lapangan Nusantara')
     .replace(/\s*\(\d+\)$/, '')
     .replace(/[-_]/g, ' ')
     .trim();
@@ -47,7 +55,7 @@ function scanFolder(folderKey, dirRel) {
     const relPath = `${dirRel}/${file}`.replace(/\\/g, '/');
     const absPath = path.join(dirAbs, file);
     const { w, h } = getImageDimensions(absPath);
-    const caption = cleanCaption(file);
+    const caption = cleanCaption(folderKey, file);
     return {
       src: relPath,
       alt: caption,
@@ -72,9 +80,23 @@ function scanAllGalleries() {
   subdirs.forEach(folderName => {
     const key = folderName.toLowerCase();
     const images = scanFolder(key, `img/Gallery/${folderName}`);
+    let title = `Dokumentasi Kegiatan — ${folderName.toUpperCase()}`;
+    let subtitle = `Galeri Foto Dokumentasi ${folderName.toUpperCase()}`;
+
+    if (key === 'ikn') {
+      title = 'Dokumentasi Kegiatan — Otorita IKN';
+      subtitle = 'Dokumentasi di Lingkungan Otorita Ibu Kota Nusantara';
+    } else if (key === 'ubig') {
+      title = 'Dokumentasi Magang — PT. Universal Big Data';
+      subtitle = 'Dokumentasi Tim & Pengembangan di Malang';
+    } else if (key === 'ukm_robotika') {
+      title = 'Dokumentasi Kegiatan — UKM Robotika IR-64';
+      subtitle = 'Dokumentasi Kegiatan & Riset di Politeknik Negeri Jember';
+    }
+
     result[key] = {
-      title: `Dokumentasi Kegiatan — ${folderName.toUpperCase()}`,
-      subtitle: `Galeri Foto Dokumentasi ${folderName.toUpperCase()}`,
+      title,
+      subtitle,
       images
     };
   });
@@ -87,4 +109,4 @@ const galleryData = scanAllGalleries();
 const rootDir = path.resolve(__dirname, '..');
 const outPath = path.join(rootDir, 'gallery-data.json');
 fs.writeFileSync(outPath, JSON.stringify(galleryData, null, 2), 'utf8');
-console.log(`Generated gallery-data.json: ikn=${galleryData.ikn.images.length} images, ubig=${galleryData.ubig.images.length} images`);
+console.log(`Generated gallery-data.json keys:`, Object.keys(galleryData).map(k => `${k}=${galleryData[k].images.length}`).join(', '));

@@ -390,6 +390,10 @@ updateActiveNav();
           span.textContent = lang === 'en'
             ? `View Internship Gallery (${count} Photos)`
             : `Lihat Dokumentasi Magang (${count} Foto)`;
+        } else if (key === 'ukm_robotika') {
+          span.textContent = lang === 'en'
+            ? `View Activity Gallery (${count} Photos)`
+            : `Lihat Dokumentasi Kegiatan (${count} Foto)`;
         } else {
           span.textContent = lang === 'en'
             ? `View Documentation (${count} Photos)`

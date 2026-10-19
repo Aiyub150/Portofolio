@@ -81,6 +81,12 @@ const translations = {
     'exp.ubig_location': '📍 Ruko Modern Kav A16-A17, Malang, Jawa Timur · On-site',
     'exp.ubig_desc': 'Menjadi Team Leader untuk team chatbot QuraniBot berbasis Rasa Framework dan berkontribusi dalam tim scraping marketplace menggunakan C# dan Nobox.',
 
+    'exp.robotika_time': '20 Agu 2024 – 1 Des 2025 · 1 thn 4 bln',
+    'exp.robotika_role': 'Bendahara & Anggota Divisi Pemrograman',
+    'exp.robotika_sub': 'Kepengurusan UKM Robotika IR-64',
+    'exp.robotika_location': '📍 Politeknik Negeri Jember, Jawa Timur · On-site',
+    'exp.robotika_desc': 'Mengelola arus keuangan organisasi UKM Robotika IR-64 serta berkontribusi aktif dalam riset algoritma, pemrograman mikrokontroler, dan pengembangan sistem robotika kompetisi.',
+
     'exp.ikn_time': 'Aug 2026 – Dec 2026 · 5 bulan',
     'exp.ikn_badge': 'Aktif',
     'exp.ikn_role': 'Artificial Intelligence Intern',
@@ -119,6 +125,8 @@ const translations = {
     // Modals & UI
     'modal.ubig_title': 'Dokumentasi Magang — PT. Universal Big Data',
     'modal.ubig_sub': 'Dokumentasi Tim & Pengembangan di Kantor UBIG Malang',
+    'modal.ukm_robotika_title': 'Dokumentasi Kegiatan — UKM Robotika IR-64',
+    'modal.ukm_robotika_sub': 'Dokumentasi Kepengurusan & Riset Robotika di Politeknik Negeri Jember',
     'modal.ikn_title': 'Dokumentasi Kegiatan — Otorita IKN',
     'modal.ikn_sub': 'Dokumentasi Lapangan & Kantor di Lingkungan Otorita IKN',
     'fab.top_title': 'Kembali ke atas',
@@ -203,6 +211,12 @@ const translations = {
     'exp.ubig_location': '📍 Ruko Modern Kav A16-A17, Malang, East Java · On-site',
     'exp.ubig_desc': 'Led the development of QuraniBot using the Rasa Framework and contributed to the marketplace web scraping team with C# and Nobox.',
 
+    'exp.robotika_time': 'Aug 20, 2024 – Dec 1, 2025 · 1 yr 4 mos',
+    'exp.robotika_role': 'Treasurer & Programming Division Member',
+    'exp.robotika_sub': 'IR-64 Robotics Student Organization',
+    'exp.robotika_location': '📍 Politeknik Negeri Jember, East Java · On-site',
+    'exp.robotika_desc': 'Managed organizational financial budgeting and actively contributed to algorithm research, microcontroller programming, and autonomous robotics development for national competitions.',
+
     'exp.ikn_time': 'Aug 2026 – Dec 2026 · 5 months',
     'exp.ikn_badge': 'Active',
     'exp.ikn_role': 'Artificial Intelligence Intern',
@@ -241,6 +255,8 @@ const translations = {
     // Modals & UI
     'modal.ubig_title': 'Internship Documentation — PT. Universal Big Data',
     'modal.ubig_sub': 'Team & Development Documentation at UBIG Office Malang',
+    'modal.ukm_robotika_title': 'Activity Documentation — IR-64 Robotics',
+    'modal.ukm_robotika_sub': 'Organizational & Robotics Research Documentation at Politeknik Negeri Jember',
     'modal.ikn_title': 'Activity Documentation — Nusantara Capital Authority',
     'modal.ikn_sub': 'Field & Office Documentation at Nusantara Capital Authority',
     'fab.top_title': 'Back to top',

@@ -1345,6 +1345,11 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 20px rgba(255, 220, 60, 0.22);
 }
 
+.exp-logo-wrap.exp-logo-robotika:hover {
+  border-color: rgba(255, 51, 51, 0.5);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 20px rgba(255, 51, 51, 0.25);
+}
+
 .exp-logo {
   width: 100%;
   height: 100%;

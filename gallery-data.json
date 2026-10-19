@@ -1,7 +1,7 @@
 {
   "ikn": {
-    "title": "Dokumentasi Kegiatan — IKN",
-    "subtitle": "Galeri Foto Dokumentasi IKN",
+    "title": "Dokumentasi Kegiatan — Otorita IKN",
+    "subtitle": "Dokumentasi di Lingkungan Otorita Ibu Kota Nusantara",
     "images": [
       {
         "src": "img/Gallery/ikn/Aktivitas Magang Otorita IKN.webp",
@@ -104,8 +104,8 @@
     ]
   },
   "ubig": {
-    "title": "Dokumentasi Kegiatan — UBIG",
-    "subtitle": "Galeri Foto Dokumentasi UBIG",
+    "title": "Dokumentasi Magang — PT. Universal Big Data",
+    "subtitle": "Dokumentasi Tim & Pengembangan di Malang",
     "images": [
       {
         "src": "img/Gallery/ubig/Diskusi Teknis Kantor UBIG.webp",
@@ -141,6 +141,180 @@
         "caption": "Suasana Kerja Internship UBIG",
         "w": 1280,
         "h": 960
+      }
+    ]
+  },
+  "ukm_robotika": {
+    "title": "Dokumentasi Kegiatan — UKM Robotika IR-64",
+    "subtitle": "Dokumentasi Kegiatan & Riset di Politeknik Negeri Jember",
+    "images": [
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.47.webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1600,
+        "h": 902
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.48 (1).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 640,
+        "h": 1136
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.48 (2).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1600,
+        "h": 719
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.48 (3).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1600,
+        "h": 719
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.48.webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1600,
+        "h": 902
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.49 (1).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1600,
+        "h": 1200
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.49 (2).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1600,
+        "h": 1200
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.49.webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1600,
+        "h": 719
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.50 (1).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1600,
+        "h": 1201
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.50 (2).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1201,
+        "h": 1600
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.50 (3).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1280,
+        "h": 960
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.50.webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1524,
+        "h": 1143
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.51 (1).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 960,
+        "h": 1280
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.51 (2).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 960,
+        "h": 1280
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.51.webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1201,
+        "h": 1600
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.52 (1).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 960,
+        "h": 1280
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.52 (2).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 960,
+        "h": 1280
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.52.webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 960,
+        "h": 1280
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.53 (1).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 960,
+        "h": 1280
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.53 (2).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.53 (3).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.53.webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 960,
+        "h": 1280
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.54 (1).webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "img/Gallery/ukm_robotika/WhatsApp Image 2026-10-19 at 09.49.54.webp",
+        "alt": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "caption": "Dokumentasi Kegiatan UKM Robotika IR-64",
+        "w": 1201,
+        "h": 1600
       }
     ]
   }

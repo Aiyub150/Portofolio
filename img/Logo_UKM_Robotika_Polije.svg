@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Vibrant tech red gradient -->
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3333"/>
+      <stop offset="100%" stop-color="#D90429"/>
+    </linearGradient>
+    <!-- Cyber dark metallic gradient for shards & banner -->
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2B2D42"/>
+      <stop offset="100%" stop-color="#14151F"/>
+    </linearGradient>
+    <linearGradient id="shardLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A4E69"/>
+      <stop offset="100%" stop-color="#22223B"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="redGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#FF0000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Geometric Mechanical Shards (Polygonal Wings) -->
+  <g id="shards">
+    <!-- Left shards -->
+    <polygon points="170,140 100,210 160,240 190,190" fill="url(#shardLight)" opacity="0.85"/>
+    <polygon points="120,230 60,290 140,320 170,270" fill="url(#metalGrad)" stroke="#4A4E69" stroke-width="1.5"/>
+    <polygon points="90,170 30,230 80,260" fill="url(#shardLight)" opacity="0.6"/>
+    
+    <!-- Right shards -->
+    <polygon points="330,140 400,210 340,240 310,190" fill="url(#shardLight)" opacity="0.85"/>
+    <polygon points="380,230 440,290 360,320 330,270" fill="url(#metalGrad)" stroke="#4A4E69" stroke-width="1.5"/>
+    <polygon points="410,170 470,230 420,260" fill="url(#shardLight)" opacity="0.6"/>
+  </g>
+
+  <!-- Robot Maskot Group -->
+  <g id="robot-mascot" filter="url(#redGlow)">
+    <!-- Antennas -->
+    <line x1="205" y1="92" x2="180" y2="52" stroke="#FF2A2A" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="178" cy="49" r="6" fill="#FF2A2A"/>
+    
+    <line x1="295" y1="92" x2="320" y2="52" stroke="#FF2A2A" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="322" cy="49" r="6" fill="#FF2A2A"/>
+
+    <!-- Head (Dome) -->
+    <path d="M 180,122 A 70,70 0 0,1 320,122 Z" fill="url(#redGrad)"/>
+    
+    <!-- Eyes -->
+    <circle cx="218" cy="98" r="7" fill="#FFFFFF"/>
+    <circle cx="282" cy="98" r="7" fill="#FFFFFF"/>
+
+    <!-- Left Arm -->
+    <rect x="150" y="138" width="22" height="95" rx="11" fill="url(#redGrad)"/>
+    <!-- Right Arm -->
+    <rect x="328" y="138" width="22" height="95" rx="11" fill="url(#redGrad)"/>
+
+    <!-- Torso / Body -->
+    <rect x="182" y="130" width="136" height="120" rx="12" fill="url(#redGrad)"/>
+
+    <!-- Legs -->
+    <rect x="208" y="254" width="24" height="42" rx="10" fill="url(#redGrad)"/>
+    <rect x="268" y="254" width="24" height="42" rx="10" fill="url(#redGrad)"/>
+
+    <!-- Chest Typography: iR-64 ROBOTIC (Clean crisp text) -->
+    <text x="250" y="180" text-anchor="middle" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#FFFFFF" letter-spacing="1.5">iR-64</text>
+    <text x="250" y="218" text-anchor="middle" font-family="'Inter', 'Arial Black', sans-serif" font-weight="800" font-size="16" fill="#F8F9FA" letter-spacing="3.5">ROBOTIC</text>
+  </g>
+
+  <!-- Bottom Angular Banner: STATE POLYTECHNIC OF JEMBER -->
+  <g id="banner">
+    <!-- Banner Polygon with crisp angular cuts -->
+    <polygon points="80,335 420,335 445,385 410,435 90,435 55,385" fill="url(#metalGrad)" stroke="#E52421" stroke-width="2.5"/>
+    <polygon points="100,345 400,345 425,385 395,425 105,425 75,385" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    
+    <!-- Banner Text -->
+    <text x="250" y="378" text-anchor="middle" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="20" fill="#FFFFFF" letter-spacing="2">STATE POLYTECHNIC</text>
+    <text x="250" y="410" text-anchor="middle" font-family="'Inter', 'Arial Black', sans-serif" font-weight="900" font-size="22" fill="#E52421" letter-spacing="3">OF JEMBER</text>
+  </g>
+</svg>
