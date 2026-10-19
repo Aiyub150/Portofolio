@@ -585,6 +585,10 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
 }
 @keyframes spinRing { to { transform: rotate(360deg); } }
 
+.hero-visual > picture {
+  display: contents;
+}
+
 .hero-photo {
   position: relative;
   z-index: 2;
@@ -686,7 +690,9 @@ h3 { font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.15; font-weight: 8
   box-shadow: var(--shadow-md);
   aspect-ratio: 1584 / 396;
 }
-.linkedin-banner img { width: 100%; height: 100%; aspect-ratio: 1584 / 396; object-fit: cover; display: block; }
+.linkedin-banner img,
+.linkedin-banner picture { width: 100%; height: 100%; aspect-ratio: 1584 / 396; display: block; }
+.linkedin-banner img { object-fit: cover; }
 
 .profile-cards {
   display: grid;

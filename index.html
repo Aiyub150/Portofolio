@@ -26,10 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload Hero Image & Critical Styles -->
-    <link rel="preload" as="image" href="img/hero-aiyub-sm.webp" media="(max-width: 600px)" fetchpriority="high" />
-    <link rel="preload" as="image" href="img/hero-aiyub.webp" media="(min-width: 601px)" fetchpriority="high" />
-    <link rel="preload" as="style" href="styles.min.css?v=20261019" />
+    <!-- Critical Styles -->
     <link rel="stylesheet" href="styles.min.css?v=20261019" />
 
     <!-- Google Fonts with font-display: swap -->
@@ -122,14 +119,15 @@
               <div class="orbit-ring orbit-ring--1" aria-hidden="true"></div>
               <div class="orbit-ring orbit-ring--2" aria-hidden="true"></div>
             </div>
-            <img src="img/hero-aiyub.webp"
-                 srcset="img/hero-aiyub-sm.webp 380w, img/hero-aiyub.webp 650w"
-                 sizes="(max-width: 600px) 280px, 420px"
-                 alt="Foto Aiyub Heriyanto"
-                 class="hero-photo"
-                 width="650" height="650"
-                 fetchpriority="high"
-                 decoding="async" />
+            <picture>
+              <source media="(max-width: 600px)" srcset="img/hero-aiyub-sm.webp" type="image/webp" />
+              <img src="img/hero-aiyub.webp"
+                   alt="Foto Aiyub Heriyanto"
+                   class="hero-photo"
+                   width="650" height="650"
+                   fetchpriority="high"
+                   decoding="async" />
+            </picture>
             <div class="status-card" aria-label="Posisi saat ini">
               <span class="status-label" data-i18n="hero.status_label">Current Position</span>
               <strong data-i18n="hero.status_title">Artificial Intelligence Intern</strong>
@@ -146,11 +144,12 @@
       <section class="profile-section" id="profile">
         <div class="section-kicker" data-i18n="profile.kicker">01 / Profil</div>
         <figure class="linkedin-banner">
-          <img src="img/banner LinkedIn.webp"
-               srcset="img/banner_linkedin_sm.webp 800w, img/banner LinkedIn.webp 1584w"
-               sizes="(max-width: 600px) 100vw, 1000px"
-               alt="Banner LinkedIn Aiyub Heriyanto"
-               width="1584" height="396" loading="lazy" decoding="async" style="aspect-ratio: 4 / 1;" />
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/banner_linkedin_sm.webp" type="image/webp" />
+            <img src="img/banner LinkedIn.webp"
+                 alt="Banner LinkedIn Aiyub Heriyanto"
+                 width="1584" height="396" loading="lazy" decoding="async" style="aspect-ratio: 4 / 1;" />
+          </picture>
         </figure>
         <div class="profile-cards" aria-label="Statistik singkat">
           <!-- Card 1: Pendidikan Polije -->
