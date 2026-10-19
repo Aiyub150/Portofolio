@@ -42,7 +42,7 @@ function scanFolder(folderKey, dirRel) {
   const dirAbs = path.join(rootDir, dirRel);
   if (!fs.existsSync(dirAbs)) return [];
   const files = fs.readdirSync(dirAbs);
-  const validExts = ['.webp', '.png', '.jpg', '.jpeg', '.svg'];
+  const validExts = ['.webp'];
   const imageFiles = files.filter(f => validExts.includes(path.extname(f).toLowerCase()));
 
   // Balance columns: distribute portrait and landscape photos evenly
