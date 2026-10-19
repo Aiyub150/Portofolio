@@ -51,19 +51,36 @@ function scanFolder(folderKey, dirRel) {
   const validExts = ['.webp', '.png', '.jpg', '.jpeg', '.svg'];
   const imageFiles = files.filter(f => validExts.includes(path.extname(f).toLowerCase()));
 
-  return imageFiles.map(file => {
+  // Balance columns: distribute portrait and landscape photos evenly
+  const sorted = imageFiles.map(file => {
     const relPath = `${dirRel}/${file}`.replace(/\\/g, '/');
     const absPath = path.join(dirAbs, file);
     const { w, h } = getImageDimensions(absPath);
     const caption = cleanCaption(folderKey, file);
+    const isPortrait = h > w;
     return {
       src: relPath,
       alt: caption,
       caption: caption,
       w,
-      h
+      h,
+      isPortrait
     };
   });
+
+  const portraits = sorted.filter(img => img.isPortrait);
+  const landscapes = sorted.filter(img => !img.isPortrait);
+
+  // Interleave landscapes and portraits so each column gets equal heights
+  const interleaved = [];
+  let pIdx = 0, lIdx = 0;
+  while (pIdx < portraits.length || lIdx < landscapes.length) {
+    if (lIdx < landscapes.length) interleaved.push(landscapes[lIdx++]);
+    if (lIdx < landscapes.length) interleaved.push(landscapes[lIdx++]);
+    if (pIdx < portraits.length) interleaved.push(portraits[pIdx++]);
+  }
+
+  return interleaved;
 }
 
 function scanAllGalleries() {
