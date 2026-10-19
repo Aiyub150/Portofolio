@@ -3,7 +3,7 @@ const path = require('path');
 
 function cleanCaption(folderKey, filename) {
   const nameWithoutExt = path.parse(filename).name;
-  if (nameWithoutExt.startsWith('WhatsApp Image')) {
+  if (nameWithoutExt.startsWith('WhatsApp Image') || nameWithoutExt.startsWith('wmremove')) {
     if (folderKey === 'ukm_robotika') {
       return 'Dokumentasi Kegiatan UKM Robotika IR-64';
     } else if (folderKey === 'ikn') {

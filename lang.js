@@ -85,7 +85,7 @@ const translations = {
     'exp.robotika_role': 'Bendahara & Anggota Divisi Pemrograman',
     'exp.robotika_sub': 'Kepengurusan UKM Robotika IR-64',
     'exp.robotika_location': '📍 Politeknik Negeri Jember, Jawa Timur · On-site',
-    'exp.robotika_desc': 'Mengelola arus keuangan organisasi UKM Robotika IR-64 serta berkontribusi aktif dalam riset algoritma, pemrograman mikrokontroler, dan pengembangan sistem robotika kompetisi.',
+    'exp.robotika_desc': 'Menjabat sebagai Bendahara serta anggota aktif divisi pemrograman yang merancang dan memprogram robot sumo untuk kompetisi BARONAS di Institut Teknologi Sepuluh Nopember (ITS) tahun 2025, sekaligus dipercaya menjadi pemateri workshop pemrograman dan algoritma dasar.',
 
     'exp.ikn_time': 'Aug 2026 – Dec 2026 · 5 bulan',
     'exp.ikn_badge': 'Aktif',
@@ -215,7 +215,7 @@ const translations = {
     'exp.robotika_role': 'Treasurer & Programming Division Member',
     'exp.robotika_sub': 'IR-64 Robotics Student Organization',
     'exp.robotika_location': '📍 Politeknik Negeri Jember, East Java · On-site',
-    'exp.robotika_desc': 'Managed organizational financial budgeting and actively contributed to algorithm research, microcontroller programming, and autonomous robotics development for national competitions.',
+    'exp.robotika_desc': 'Served as Treasurer and active member of the programming division, engineering and programming an autonomous sumo robot for the BARONAS competition at Institut Teknologi Sepuluh Nopember (ITS) 2025, while also serving as instructor and speaker for fundamental programming and algorithm workshops.',
 
     'exp.ikn_time': 'Aug 2026 – Dec 2026 · 5 months',
     'exp.ikn_badge': 'Active',
