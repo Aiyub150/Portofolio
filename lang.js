@@ -18,12 +18,12 @@ const translations = {
     'hero.eyebrow': 'Mahasiswa Teknik Komputer',
     'hero.title_lines': '["IoT Engineering","&amp; Full Stack","Web Dev."]',
     'hero.title_aria': 'IoT Engineering &amp; Full Stack Web Dev.',
-    'hero.desc': 'Saya Aiyub Heriyanto, mahasiswa D3 Teknik Komputer di Politeknik Negeri Jember yang berfokus pada Full Stack Web Development, Internet of Things, dan Artificial Intelligence.',
+    'hero.desc': 'Saya Aiyub Heriyanto, mahasiswa D3 Teknik Komputer di Politeknik Negeri Jember yang berfokus pada Full Stack Web Development, Internet of Things, serta antusias mendalami Artificial Intelligence (AI Enthusiast).',
     'hero.btn_projects': 'Lihat Proyek',
     'hero.btn_contact': 'Hubungi Saya',
     'hero.status_label': 'Posisi Saat Ini',
     'hero.status_title': 'Artificial Intelligence Intern',
-    'hero.status_desc': 'Otorita Ibu Kota Nusantara · Deputi Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan',
+    'hero.status_desc': 'Otorita Ibu Kota Nusantara · Deputi Transformasi Hijau dan Digital · Direktorat Data & Kecerdasan Buatan',
 
     // Profile Section
     'profile.kicker': '01 / Profil',
@@ -39,7 +39,7 @@ const translations = {
     'profile.stat_exp_sub': 'OIKN & PT UBIG',
     'profile.stat_exp_tag1': 'Otorita IKN',
     'profile.stat_exp_tag2': 'PT UBIG',
-    'profile.stat_exp_desc': 'Berkontribusi di Deputi Transformasi Hijau dan Digital (Direktorat Kecerdasan Buatan) Otorita IKN, serta 6 bulan memimpin tim chatbot AI di PT UBIG.',
+    'profile.stat_exp_desc': 'Berkontribusi di Deputi Transformasi Hijau dan Digital (Direktorat Data & Kecerdasan Buatan) Otorita IKN, serta 6 bulan memimpin tim chatbot AI di PT UBIG.',
 
     'profile.stat_proj_cat': 'KARYA & REKAYASA',
     'profile.stat_proj_val': '10+ Proyek',
@@ -48,17 +48,17 @@ const translations = {
     'profile.stat_proj_tag2': 'Open Source',
     'profile.stat_proj_desc': 'Mengembangkan backend performan tinggi (Go Fiber & Laravel), WebGIS spatial, hingga model edge computer vision & IoT terhubung.',
 
-    'profile.heading': 'Membangun solusi digital dari web, data, perangkat terhubung, sampai AI.',
+    'profile.heading': 'Membangun solusi digital dari web, data, perangkat terhubung, serta eksplorasi AI.',
     'profile.lead': 'Berbasis di Jember, Jawa Timur. Saya memadukan rekayasa backend berkinerja tinggi, arsitektur web modern, dan sistem IoT terhubung untuk menciptakan solusi komputasi yang efisien dan berdampak nyata.',
     'profile.loc': 'Jember, Jawa Timur, Indonesia',
     'profile.edu': 'D3 Teknik Komputer · Politeknik Negeri Jember',
-    'profile.intern_history': 'Pernah Internship di Otorita IKN (Direktorat AI) & PT UBIG',
+    'profile.intern_history': 'Pernah Internship di Otorita IKN (Direktorat Data & AI) & PT UBIG',
     'profile.cta': 'Lihat Profil LinkedIn',
 
     // Terminal Component
     'terminal.whoami': 'Aiyub Heriyanto — Software Engineer & Hardware Tinkerer',
     'terminal.about': '<p>Halo! Saya Aiyub, mahasiswa Teknik Komputer asal Jember, Jawa Timur. Sehari-hari saya banyak berkutat di backend engineering (Go & Laravel), merancang arsitektur web app yang scalable, serta ngoprek IoT, mikrokontroler, hingga computer vision untuk edge devices.</p><p>Lebih suka bikin sistem yang arsitekturnya bersih, kencang, dan gampang dirawat daripada yang ribet atau over-engineered. Kalau lagi tidak di depan terminal, biasanya lagi nyolder sirkuit, ngulik robotika, atau nyoba inovasi baru seputar AI.</p>',
-    'terminal.status': '<div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Location       :</span> <span class="status-val">Jember, Jawa Timur / Nusantara, ID</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Daily Drivers  :</span> <span class="status-val">Go, Laravel, React, Python, C/C++</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Current Focus  :</span> <span class="status-val">Building full-stack services & edge AI models</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Status         :</span> <span class="status-val">Open for collaboration & engineering opportunities</span></div>',
+    'terminal.status': '<div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Location       :</span> <span class="status-val">Jember, Jawa Timur / Nusantara, ID</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Daily Drivers  :</span> <span class="status-val">Go, Laravel, React, Python, C/C++</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Current Focus  :</span> <span class="status-val">Building full-stack services &amp; exploring edge AI</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Status         :</span> <span class="status-val">Open for collaboration &amp; engineering opportunities</span></div>',
 
     // Skills Section
     'skills.kicker': '02 / Skill Focus',
@@ -90,9 +90,10 @@ const translations = {
     'exp.ikn_time': 'Aug 2026 – Dec 2026 · 5 bulan',
     'exp.ikn_badge': 'Aktif',
     'exp.ikn_role': 'Artificial Intelligence Intern',
-    'exp.ikn_sub': 'Deputi Bidang Transformasi Hijau dan Digital · Direktorat Kecerdasan Buatan',
+    'exp.ikn_sub': 'Deputi Bidang Transformasi Hijau dan Digital · Direktorat Data & Kecerdasan Buatan',
     'exp.ikn_location': '📍 Penajam Paser Utara, Kalimantan Timur · On-site',
     'exp.ikn_desc': 'Mengembangkan pemahaman tentang penerapan teknologi, software, dan solusi digital di lingkungan transformasi hijau dan digital pada ibu kota baru Indonesia.',
+    'exp.btn_cert': 'Lihat Sertifikat',
 
     // Projects Section
     'proj.btn_visit': 'Kunjungi Web',
@@ -129,6 +130,16 @@ const translations = {
     'modal.ukm_robotika_sub': 'Dokumentasi Kepengurusan & Riset Robotika di Politeknik Negeri Jember',
     'modal.ikn_title': 'Dokumentasi Kegiatan — Otorita IKN',
     'modal.ikn_sub': 'Dokumentasi Lapangan & Kantor di Lingkungan Otorita IKN',
+    'modal.cert_title': 'Sertifikat',
+    'modal.cert_sub': 'Pratinjau Dokumen & Lisensi',
+    'modal.cert_active_badge': 'Program Sedang Berlangsung',
+    'modal.cert_active_heading': 'Sertifikat Masih Dalam Proses',
+    'modal.cert_active_desc': 'Program magang di Otorita Ibu Kota Nusantara (Direktorat Data & Kecerdasan Buatan) saat ini masih aktif berlangsung (Agustus – Desember 2026). Sertifikat resmi akan diterbitkan oleh Otorita IKN setelah masa penugasan selesai.',
+    'modal.cert_ubig_title': 'Sertifikat Magang — PT. Universal Big Data',
+    'modal.cert_ubig_desc': 'Sertifikat Penghargaan sebagai Siswa Magang di PT. Universal Big Data dari SMK Negeri 6 Jember.',
+    'modal.cert_robotika_title': 'Sertifikat Kepengurusan — UKM Robotika IR-64',
+    'modal.cert_robotika_desc': 'Sertifikat kepengurusan sebagai Bendahara & Pemateri UKM Robotika Kepengurusan tahun 2024/2025.',
+    'modal.cert_ikn_title': 'Sertifikat Magang — Otorita IKN',
     'fab.top_title': 'Kembali ke atas',
     'fab.wa_title': 'Chat via WhatsApp',
     'footer.copyright': '© 2026 Aiyub Heriyanto'
@@ -148,12 +159,12 @@ const translations = {
     'hero.eyebrow': 'Computer Engineering Student',
     'hero.title_lines': '["IoT Engineering","&amp; Full Stack","Web Dev."]',
     'hero.title_aria': 'IoT Engineering &amp; Full Stack Web Dev.',
-    'hero.desc': 'I am Aiyub Heriyanto, a Computer Engineering student at Politeknik Negeri Jember specializing in Full Stack Web Development, Internet of Things, and Artificial Intelligence.',
+    'hero.desc': 'I am Aiyub Heriyanto, a Computer Engineering student at Politeknik Negeri Jember focusing on Full Stack Web Development, Internet of Things, and an avid Artificial Intelligence enthusiast.',
     'hero.btn_projects': 'View Projects',
     'hero.btn_contact': 'Contact Me',
     'hero.status_label': 'Current Position',
     'hero.status_title': 'Artificial Intelligence Intern',
-    'hero.status_desc': 'Otorita Ibu Kota Nusantara · Deputy for Green and Digital Transformation · Directorate of Artificial Intelligence',
+    'hero.status_desc': 'Otorita Ibu Kota Nusantara · Deputy for Green and Digital Transformation · Directorate of Data & Artificial Intelligence',
 
     // Profile Section
     'profile.kicker': '01 / Profile',
@@ -169,7 +180,7 @@ const translations = {
     'profile.stat_exp_sub': 'OIKN & PT UBIG',
     'profile.stat_exp_tag1': 'Otorita IKN',
     'profile.stat_exp_tag2': 'PT UBIG',
-    'profile.stat_exp_desc': 'Contributed to the Deputy for Green and Digital Transformation (Directorate of Artificial Intelligence) at Otorita IKN, and 6 months leading the AI chatbot team at PT UBIG.',
+    'profile.stat_exp_desc': 'Contributed to the Deputy for Green and Digital Transformation (Directorate of Data & Artificial Intelligence) at Otorita IKN, and 6 months leading the AI chatbot team at PT UBIG.',
 
     'profile.stat_proj_cat': 'PROJECTS & RESEARCH',
     'profile.stat_proj_val': '10+ Projects',
@@ -178,17 +189,17 @@ const translations = {
     'profile.stat_proj_tag2': 'Open Source',
     'profile.stat_proj_desc': 'Engineered high-performance backends (Go Fiber & Laravel), spatial WebGIS systems, and edge computer vision with IoT integrations.',
 
-    'profile.heading': 'Building digital solutions across web, data, connected hardware, to AI.',
+    'profile.heading': 'Building digital solutions across web, data, connected hardware, and AI exploration.',
     'profile.lead': 'Based in Jember, East Java. I combine high-performance backend engineering, modern web architectures, and connected IoT systems to engineer efficient, high-impact solutions.',
     'profile.loc': 'Jember, East Java, Indonesia',
     'profile.edu': 'Computer Engineering Diploma · Politeknik Negeri Jember',
-    'profile.intern_history': 'Prior Industry Internships at Otorita IKN (Directorate of AI) & PT UBIG',
+    'profile.intern_history': 'Prior Industry Internships at Otorita IKN (Directorate of Data & AI) & PT UBIG',
     'profile.cta': 'View LinkedIn Profile',
 
     // Terminal Component
     'terminal.whoami': 'Aiyub Heriyanto — Software Engineer & Hardware Tinkerer',
     'terminal.about': '<p>Hi! I am Aiyub, a Computer Engineering student from Jember, East Java, Indonesia. Most of my days are spent in backend engineering (Go & Laravel), architecting scalable web applications, and tinkering with IoT hardware, microcontrollers, and edge computer vision.</p><p>I value clean, resilient, and maintainable systems over unnecessary complexity. Outside the terminal, you will usually find me soldering circuits, exploring robotics, or experimenting with the latest in AI.</p>',
-    'terminal.status': '<div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Location       :</span> <span class="status-val">Jember, East Java / Nusantara, ID</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Daily Drivers  :</span> <span class="status-val">Go, Laravel, React, Python, C/C++</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Current Focus  :</span> <span class="status-val">Building full-stack services & edge AI models</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Status         :</span> <span class="status-val">Open for collaboration & engineering opportunities</span></div>',
+    'terminal.status': '<div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Location       :</span> <span class="status-val">Jember, East Java / Nusantara, ID</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Daily Drivers  :</span> <span class="status-val">Go, Laravel, React, Python, C/C++</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Current Focus  :</span> <span class="status-val">Building full-stack services &amp; exploring edge AI</span></div><div class="status-line"><span class="status-tag">[OK]</span> <span class="status-key">Status         :</span> <span class="status-val">Open for collaboration &amp; engineering opportunities</span></div>',
 
     // Skills Section
     'skills.kicker': '02 / Skill Focus',
@@ -220,9 +231,10 @@ const translations = {
     'exp.ikn_time': 'Aug 2026 – Dec 2026 · 5 months',
     'exp.ikn_badge': 'Active',
     'exp.ikn_role': 'Artificial Intelligence Intern',
-    'exp.ikn_sub': 'Deputy for Green & Digital Transformation · Directorate of Artificial Intelligence',
+    'exp.ikn_sub': 'Deputy for Green & Digital Transformation · Directorate of Data & Artificial Intelligence',
     'exp.ikn_location': '📍 Penajam Paser Utara, East Kalimantan · On-site',
     'exp.ikn_desc': 'Developing hands-on insights into cutting-edge technology, enterprise software, and smart digital solutions within Indonesia\'s new capital.',
+    'exp.btn_cert': 'View Certificate',
 
     // Projects Section
     'proj.btn_visit': 'Visit Web',
@@ -259,6 +271,16 @@ const translations = {
     'modal.ukm_robotika_sub': 'Organizational & Robotics Research Documentation at Politeknik Negeri Jember',
     'modal.ikn_title': 'Activity Documentation — Nusantara Capital Authority',
     'modal.ikn_sub': 'Field & Office Documentation at Nusantara Capital Authority',
+    'modal.cert_title': 'Certificate',
+    'modal.cert_sub': 'Document & License Preview',
+    'modal.cert_active_badge': 'Program Currently Active',
+    'modal.cert_active_heading': 'Certificate Currently in Progress',
+    'modal.cert_active_desc': 'The internship program at Nusantara Capital Authority (Directorate of Data & Artificial Intelligence) is currently active (August – December 2026). The official certificate will be issued by Otorita IKN upon program completion.',
+    'modal.cert_ubig_title': 'Internship Certificate — PT. Universal Big Data',
+    'modal.cert_ubig_desc': 'Certificate of Appreciation as an Intern at PT. Universal Big Data from SMK Negeri 6 Jember.',
+    'modal.cert_robotika_title': 'Organizational Certificate — IR-64 Robotics',
+    'modal.cert_robotika_desc': 'Certificate of Service as Treasurer & Workshop Speaker at IR-64 Robotics (2024/2025).',
+    'modal.cert_ikn_title': 'Internship Certificate — Nusantara Capital Authority',
     'fab.top_title': 'Back to top',
     'fab.wa_title': 'Chat via WhatsApp',
     'footer.copyright': '© 2026 Aiyub Heriyanto'
@@ -531,8 +553,12 @@ function initLanguage() {
     });
   });
 
-  // Verify non-blocking Geo-IP in background
-  verifyGeoIP();
+  // Verify non-blocking Geo-IP in background during idle
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => verifyGeoIP(), { timeout: 3000 });
+  } else {
+    setTimeout(verifyGeoIP, 2500);
+  }
 }
 
 // Auto init on DOMContentLoaded or immediately if DOM is ready

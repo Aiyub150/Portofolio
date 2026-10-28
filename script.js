@@ -556,3 +556,147 @@ updateActiveNav();
     }
   });
 })();
+
+(function initExperienceCertificates() {
+  const certModal = document.getElementById('cert-modal');
+  const certBackdrop = document.getElementById('cert-modal-backdrop');
+  const certCloseBtn = document.getElementById('cert-modal-close');
+  const certTitleEl = document.getElementById('cert-modal-title');
+  const certSubtitleEl = document.getElementById('cert-modal-subtitle');
+  const certBodyEl = document.getElementById('cert-modal-body');
+
+  if (!certModal || !certBodyEl) return;
+
+  let currentCertKey = null;
+
+  const certData = {
+    ubig: {
+      type: 'image',
+      src: 'img/Certificate/Certificate-5.webp',
+      w: 1600,
+      h: 1131,
+      titleKey: 'modal.cert_ubig_title',
+      descKey: 'modal.cert_ubig_desc',
+      fallbackTitle: 'Sertifikat Magang — PT. Universal Big Data',
+      fallbackDesc: 'Sertifikat Penghargaan sebagai Siswa Magang di PT. Universal Big Data dari SMK Negeri 6 Jember.'
+    },
+    ukm_robotika: {
+      type: 'image',
+      src: 'img/Certificate/Certificate-4.webp',
+      w: 1600,
+      h: 1131,
+      titleKey: 'modal.cert_robotika_title',
+      descKey: 'modal.cert_robotika_desc',
+      fallbackTitle: 'Sertifikat Kepengurusan — UKM Robotika IR-64',
+      fallbackDesc: 'Sertifikat kepengurusan sebagai Bendahara & Pemateri UKM Robotika Kepengurusan tahun 2024/2025.'
+    },
+    ikn: {
+      type: 'in_progress',
+      titleKey: 'modal.cert_ikn_title',
+      fallbackTitle: 'Sertifikat Magang — Otorita IKN'
+    }
+  };
+
+  function getTranslation(key, fallback) {
+    const lang = window.currentLang || localStorage.getItem('aiyub_lang') || 'id';
+    return (window.translations && window.translations[lang] && window.translations[lang][key]) || fallback;
+  }
+
+  function renderCertContent(key) {
+    const item = certData[key];
+    if (!item) return;
+
+    const title = getTranslation(item.titleKey, item.fallbackTitle);
+    const sub = getTranslation('modal.cert_sub', 'Pratinjau Lisensi & Dokumen');
+
+    if (certTitleEl) certTitleEl.textContent = title;
+    if (certSubtitleEl) certSubtitleEl.textContent = sub;
+
+    certBodyEl.innerHTML = '';
+
+    if (item.type === 'image') {
+      const desc = getTranslation(item.descKey, item.fallbackDesc);
+      const wrap = document.createElement('div');
+      wrap.className = 'cert-view-wrap';
+
+      const imgBox = document.createElement('div');
+      imgBox.className = 'cert-img-container';
+
+      const img = document.createElement('img');
+      img.src = item.src;
+      img.alt = title;
+      img.width = item.w || 1600;
+      img.height = item.h || 1131;
+      img.loading = 'eager';
+      img.decoding = 'async';
+
+      imgBox.appendChild(img);
+      wrap.appendChild(imgBox);
+
+      if (desc) {
+        const captionBox = document.createElement('div');
+        captionBox.className = 'cert-caption-box';
+        captionBox.innerHTML = `<h4>${title}</h4><p>${desc}</p>`;
+        wrap.appendChild(captionBox);
+      }
+
+      certBodyEl.appendChild(wrap);
+    } else {
+      const badgeText = getTranslation('modal.cert_active_badge', 'Program Sedang Berlangsung');
+      const headingText = getTranslation('modal.cert_active_heading', 'Sertifikat Masih Dalam Proses');
+      const descText = getTranslation('modal.cert_active_desc', 'Program magang di Otorita Ibu Kota Nusantara (Direktorat Data & Kecerdasan Buatan) saat ini masih aktif berlangsung (Agustus – Desember 2026). Sertifikat resmi akan diterbitkan oleh Otorita IKN setelah masa penugasan selesai.');
+
+      const notice = document.createElement('div');
+      notice.className = 'cert-progress-box';
+      notice.innerHTML = `
+        <div class="cert-progress-icon-wrap" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="cert-progress-badge">
+          <span class="pulsing-dot" aria-hidden="true"></span>
+          <span>${badgeText}</span>
+        </div>
+        <h4 class="cert-progress-title">${headingText}</h4>
+        <p class="cert-progress-desc">${descText}</p>
+      `;
+      certBodyEl.appendChild(notice);
+    }
+  }
+
+  function openCertModal(key) {
+    currentCertKey = key;
+    renderCertContent(key);
+    certModal.classList.add('is-open');
+    certModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCertModal() {
+    certModal.classList.remove('is-open');
+    certModal.setAttribute('aria-hidden', 'true');
+    currentCertKey = null;
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.exp-cert-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.cert;
+      openCertModal(key);
+    });
+  });
+
+  if (certCloseBtn) certCloseBtn.addEventListener('click', closeCertModal);
+  if (certBackdrop) certBackdrop.addEventListener('click', closeCertModal);
+
+  window.addEventListener('languageChanged', () => {
+    if (currentCertKey && certModal.classList.contains('is-open')) {
+      renderCertContent(currentCertKey);
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certModal.classList.contains('is-open')) {
+      closeCertModal();
+    }
+  });
+})();
