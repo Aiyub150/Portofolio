@@ -28,19 +28,19 @@
         "isPortrait": true
       },
       {
+        "src": "img/Gallery/ikn/Foto Bersama Penutupan Magang IKN.webp",
+        "alt": "Dokumentasi Magang Di Otorita IKN",
+        "caption": "Dokumentasi Magang Di Otorita IKN",
+        "w": 1599,
+        "h": 1200,
+        "isPortrait": false
+      },
+      {
         "src": "img/Gallery/ikn/Kegiatan Lapangan Transformasi Digital.webp",
         "alt": "Dokumentasi Magang Di Otorita IKN",
         "caption": "Dokumentasi Magang Di Otorita IKN",
         "w": 1600,
         "h": 1200,
-        "isPortrait": false
-      },
-      {
-        "src": "img/Gallery/ikn/Kunjungan Proyek Nusantara.webp",
-        "alt": "Dokumentasi Magang Di Otorita IKN",
-        "caption": "Dokumentasi Magang Di Otorita IKN",
-        "w": 1600,
-        "h": 900,
         "isPortrait": false
       },
       {
@@ -52,6 +52,14 @@
         "isPortrait": true
       },
       {
+        "src": "img/Gallery/ikn/Kunjungan Proyek Nusantara.webp",
+        "alt": "Dokumentasi Magang Di Otorita IKN",
+        "caption": "Dokumentasi Magang Di Otorita IKN",
+        "w": 1600,
+        "h": 900,
+        "isPortrait": false
+      },
+      {
         "src": "img/Gallery/ikn/Pelatihan IBM Bob.webp",
         "alt": "Dokumentasi Magang Di Otorita IKN",
         "caption": "Dokumentasi Magang Di Otorita IKN",
@@ -60,11 +68,27 @@
         "isPortrait": false
       },
       {
-        "src": "img/Gallery/ikn/Site Visit KIPP Batch 4.webp",
+        "src": "img/Gallery/ikn/Penyerahan Sertifikat Magang IKN.webp",
         "alt": "Dokumentasi Magang Di Otorita IKN",
         "caption": "Dokumentasi Magang Di Otorita IKN",
-        "w": 1600,
-        "h": 900,
+        "w": 1200,
+        "h": 1599,
+        "isPortrait": true
+      },
+      {
+        "src": "img/Gallery/ikn/Presentasi Akhir Magang IKN 1.webp",
+        "alt": "Dokumentasi Magang Di Otorita IKN",
+        "caption": "Dokumentasi Magang Di Otorita IKN",
+        "w": 1280,
+        "h": 960,
+        "isPortrait": false
+      },
+      {
+        "src": "img/Gallery/ikn/Presentasi Akhir Magang IKN 2.webp",
+        "alt": "Dokumentasi Magang Di Otorita IKN",
+        "caption": "Dokumentasi Magang Di Otorita IKN",
+        "w": 1280,
+        "h": 960,
         "isPortrait": false
       },
       {
@@ -74,6 +98,14 @@
         "w": 899,
         "h": 1600,
         "isPortrait": true
+      },
+      {
+        "src": "img/Gallery/ikn/Site Visit KIPP Batch 4.webp",
+        "alt": "Dokumentasi Magang Di Otorita IKN",
+        "caption": "Dokumentasi Magang Di Otorita IKN",
+        "w": 1600,
+        "h": 900,
+        "isPortrait": false
       },
       {
         "src": "img/Gallery/ikn/Site Visit Pembangunan IKN 1.webp",
